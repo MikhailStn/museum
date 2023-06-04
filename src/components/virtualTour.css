@@ -1,0 +1,86 @@
+.virtual-tour__container {
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 50px;
+}
+
+.virtual-tour {
+  max-width: 1440px;
+  width: 100%;
+}
+
+.virtual-tour__title {
+  text-transform: uppercase;
+  font-size: 80px;
+  letter-spacing: 5px;
+  color: #9d8665;
+  font-family: "Forum Regular";
+  font-weight: 400;
+  margin-top: 75px;
+  margin-bottom: 75px;
+  padding-bottom: 25px;
+  border-bottom: 3px solid #710707;
+  cursor: default;
+}
+
+.virtual-tour__bg {
+  width: 440px;
+  height: 285px;
+}
+
+.virtual-tour__cards {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 60px;
+  row-gap: 55px;
+}
+
+.virtual-tour__subtitle {
+  text-transform: uppercase;
+  font-size: 32px;
+  letter-spacing: 5px;
+  font-family: "Forum Regular";
+  font-weight: lighter;
+  margin-top: 27px;
+  padding-bottom: 10px;
+  margin-bottom: 0;
+  width: 300px;
+  white-space: nowrap;
+  border-bottom: 2px solid #710707;
+  cursor: pointer;
+}
+
+.virtual-tour__sub-top {
+  font-size: 22px;
+  font-family: "Roboto Light";
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.virtual-tour__sub-bottom {
+  font-size: 18px;
+  font-family: "Roboto Light";
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.virtual-tour__link {
+  text-decoration: none;
+  color: black;
+  transition: 0.5s;
+  opacity: 0.8;
+}
+
+.virtual-tour__link:hover {
+  transform: scale(1.05);
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  opacity: 1;
+}
+
+.virtual-tour__link:hover .virtual-tour__subtitle {
+  color: #9d8665;
+  border-bottom: 2px solid #9d8665;
+}

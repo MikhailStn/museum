@@ -1,0 +1,35 @@
+.video__container {
+  width: 100%;
+  background-color: #fff;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.video {
+  max-width: 1440px;
+}
+
+.video__title-section {
+  display: flex;
+  width: 100%;
+}
+
+.video__title {
+  font-size: 80px;
+  font-family: "Forum Regular";
+  font-weight: 100;
+  color: #9d8665;
+  text-transform: uppercase;
+  width: 50%;
+  margin-top: 80px;
+  margin-bottom: 75px;
+}
+
+.video__subtitle {
+  width: 50%;
+  font-size: 22px;
+  font-family: "Roboto Light";
+  margin-top: 85px;
+  line-height: 38.5px;
+}

@@ -1,0 +1,36 @@
+@font-face {
+  font-family: "Roboto Regular";
+  src: url("../public/fonts/Roboto-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Forum Regular";
+  src: url("../public/fonts/Forum-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Roboto Thin";
+  src: url("../fonts/Roboto-Thin.ttf");
+}
+
+@font-face {
+  font-family: "Roboto Light";
+  src: url("../public/fonts/Roboto-Light.ttf");
+}
+
+* {
+  font-family: "Roboto Regular";
+  transition: 0.3s;
+}
+
+body {
+  margin: 0;
+  height: 200vh;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
