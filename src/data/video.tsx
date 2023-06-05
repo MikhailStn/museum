@@ -15,25 +15,31 @@ export const videos = [
     id: 0,
     videoPath: video0,
     poster: poster0,
+    title: 'Welcome to the Louvre - Bienvenue au Louvre - Musée du Louvre',
   },
   {
     id: 1,
     videoPath: video1,
     poster: poster1,
+    title: 'Au Louvre ! La Vénus de Milo',
   },
   {
     id: 2,
     videoPath: video2,
     poster: poster2,
+    title: 'Promenade dans les collections mésopotamiennes avec Ariane Thomas',
   },
   {
     id: 3,
     videoPath: video3,
     poster: poster3,
+    title:
+      "Exposition - Le Corps et l'Âme. De Donatello à Michel-Ange. Sculptures italiennes de la Renaissance",
   },
   {
     id: 4,
     videoPath: video4,
     poster: poster4,
+    title: 'Petits contes de Printemps - La ruse du Renard',
   },
 ];

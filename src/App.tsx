@@ -1,9 +1,9 @@
 import "./App.css";
-import { Header } from "./components/header";
-import { WelcomePage } from "./components/welcome";
-import { VirtualTour } from "./components/virtualTour";
-import { PictureExplore } from "./components/pictureExplore";
-import { VideoJourney } from "./components/videoJourney";
+import { Header } from "./components/header/header";
+import { WelcomePage } from "./components/welcome/welcome";
+import { VirtualTour } from "./components/virtualTour/virtualTour";
+import { PictureExplore } from "./components/pictureExplore/pictureExplore";
+import { VideoJourney } from "./components/videoJourney/videoJourney";
 
 export function App() {
   return (

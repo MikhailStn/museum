@@ -1,11 +1,11 @@
 @font-face {
-  font-family: "Forum Regular";
-  src: url("../../public/fonts/Forum-Regular.ttf");
+  font-family: 'Forum Regular';
+  src: url('../../fonts/Forum-Regular.ttf');
 }
 
 @font-face {
-  font-family: "Roboto Thin";
-  src: url("../../public/fonts/Roboto-Thin.ttf");
+  font-family: 'Roboto Thin';
+  src: url('../../fonts/Roboto-Thin.ttf');
 }
 
 .header__wrapper {
@@ -33,7 +33,7 @@
 }
 
 .header__logo {
-  background-image: url("../../public/icons/logo.svg");
+  background-image: url('../../public/icons/logo.svg');
   width: 50px;
   height: 30px;
   cursor: pointer;
@@ -45,7 +45,7 @@
 .header__title {
   text-transform: uppercase;
   color: #fff;
-  font-family: "Forum Regular";
+  font-family: 'Forum Regular';
   cursor: pointer;
   font-size: 28px;
   letter-spacing: 5px;
@@ -67,7 +67,7 @@
   color: #fff;
   font-size: 22px;
   letter-spacing: 2px;
-  font-family: "Roboto Light";
+  font-family: 'Roboto Light';
   cursor: pointer;
 }
 

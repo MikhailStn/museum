@@ -1,4 +1,4 @@
-import { sliderItems } from "../data/welcomeSlider";
+import { sliderItems } from '../../data/welcomeSlider';
 
 export function Slider() {
   return (
@@ -9,12 +9,7 @@ export function Slider() {
           const backroundImage = {
             backgroundImage: `url('${el.path}')`,
           };
-          return (
-            <div
-              className="slider__el"
-              style={backroundImage}
-            ></div>
-          );
+          return <div className="slider__el" style={backroundImage} key={el.id}></div>;
         })}
       </div>
     </div>
