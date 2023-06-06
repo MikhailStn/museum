@@ -17,6 +17,7 @@
   max-width: 660px;
   display: flex;
   flex-direction: column;
+  cursor: default;
 }
 
 .picture-explore__title {
