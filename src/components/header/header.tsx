@@ -2,7 +2,7 @@ import './header.css';
 
 export function Header() {
   return (
-    <div className="header__wrapper">
+    <div className="header__container">
       <header className="header">
         <div className="header__logo-wrapper">
           <div className="header__logo"></div>

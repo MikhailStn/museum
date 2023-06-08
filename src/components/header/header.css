@@ -8,7 +8,7 @@
   src: url('../../fonts/Roboto-Thin.ttf');
 }
 
-.header__wrapper {
+.header__container {
   width: 100%;
   display: flex;
   justify-content: center;
