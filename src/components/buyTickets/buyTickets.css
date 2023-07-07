@@ -1,0 +1,195 @@
+.buy-tickets__container {
+  color: #fff;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.buy-tickets {
+  display: flex;
+  flex-direction: column;
+  max-width: 1440px;
+  align-items: center;
+  width: 100%;
+  color: black;
+}
+
+.buy-tickets__title {
+  text-transform: uppercase;
+  color: #9d8665;
+  font-family: "Forum Regular";
+  cursor: default;
+  font-size: 80px;
+  letter-spacing: 5px;
+  font-weight: 100;
+  width: 100%;
+  border-bottom: 3px solid #710707;
+  padding-bottom: 30px;
+}
+
+.buy-tickets__content {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.buy-tickets__form {
+  display: flex;
+  width: 45%;
+  justify-content: space-between;
+}
+
+.buy-tickets__types {
+  display: flex;
+  flex-direction: column;
+}
+
+.buy-tickets__types-title,
+.buy-tickets__amount-title {
+  font-size: 30px;
+  font-family: "Roboto Light";
+  margin: 0;
+  cursor: default;
+}
+
+.buy-tickets__types-input {
+  display: flex;
+  align-items: center;
+}
+
+.buy-tickets__types-label {
+  font-family: "Roboto Light";
+  font-size: 22px;
+}
+
+.buy-tickets__types-input:checked + label,
+.buy-tickets__types-input:not(:checked) + label {
+  display: inline-block;
+  position: relative;
+  padding-left: 28px;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+.buy-tickets__types-input:checked + label:before,
+.buy-tickets__types-input:not(:checked) + label:before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 13px;
+  height: 13px;
+  border: 2px solid #272727;
+  background-color: #ffffff;
+}
+
+.buy-tickets__types-input:checked + label:before,
+.buy-tickets__types-input:not(:checked) + label:before {
+  border-radius: 100%;
+}
+
+.buy-tickets__types-input:checked + label:after,
+.buy-tickets__types-input:not(:checked) + label:after {
+  content: "";
+  position: absolute;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.buy-tickets__types-input:checked + label:after,
+.buy-tickets__types-input:not(:checked) + label:after {
+  left: 4px;
+  top: 4px;
+  width: 9px;
+  height: 9px;
+  border-radius: 100%;
+  background-color: #525151;
+}
+
+.buy-tickets__types-input:not(:checked) + label:after {
+  opacity: 0;
+}
+
+.buy-tickets__types-input:checked + label:after {
+  opacity: 1;
+}
+
+.buy-tickets__types-input {
+  display: none;
+}
+
+.buy-tickets__amount {
+  width: 175px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.buy-tickets__types-title {
+  margin-bottom: 60px;
+}
+
+.buy-tickets__types-item {
+  padding-bottom: 35px;
+}
+
+.buy-tickets__amount-controls {
+  width: 150px;
+  height: 50px;
+  border: 3px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 20px;
+}
+
+.buy-tickets__amount-subtitle {
+  font-size: 22px;
+  font-family: "Roboto Thin";
+  margin: 20px 0;
+}
+
+.buy-tickets__amount-controls-btn {
+  font-size: 32px;
+  font-family: "Roboto Regular";
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+}
+
+.buy-tickets__amount-controls-btn:hover {
+  color: #9d8665;
+}
+
+.buy-tickets__amount-value {
+  font-size: 24px;
+}
+
+.buy-tickets__amount-total {
+  font-size: 28px;
+  font-family: "Roboto Regular";
+  width: 150px;
+  cursor: default;
+}
+
+.buy-tickets__button {
+  width: 175px;
+  height: 50px;
+  cursor: pointer;
+  background-color: #000;
+  color: #fff;
+  font-family: "Roboto Light";
+  font-size: 22px;
+  border: none;
+  margin-top: 20px;
+}
+
+.buy-tickets__button:hover {
+  background-color: #9d8665;
+}
+
+.buy-tickets__amount-subtitle {
+  cursor: default;
+}
