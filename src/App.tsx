@@ -6,6 +6,8 @@ import { PictureExplore } from "./components/pictureExplore/pictureExplore";
 import { VideoJourney } from "./components/videoJourney/videoJourney";
 import { ArtGallery } from "./components/artGallery/artGallery";
 import { BuyTickets } from "./components/buyTickets/buyTickets";
+import { Parallax } from "./components/parallax/parallax";
+import { Contacts } from "./components/contacts/contacts";
 
 export function App() {
   return (
@@ -17,6 +19,8 @@ export function App() {
       <VideoJourney />
       <ArtGallery />
       <BuyTickets />
+      <Parallax />
+      <Contacts />
     </div>
   );
 }

@@ -1,0 +1,46 @@
+.contacts__container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.contacts {
+  width: 100%;
+  max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts__title {
+  font-size: 80px;
+  letter-spacing: 5px;
+  color: #9d8665;
+  text-transform: uppercase;
+  font-family: "Forum Regular";
+  font-weight: 100;
+  margin-top: 80px;
+  border-bottom: 3px solid #710707;
+  padding-bottom: 25px;
+  cursor: default;
+}
+
+.contacts__content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contacts__description-title {
+  font-size: 28px;
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+
+.contacts__description-sub {
+  font-family: "Roboto Light";
+  font-size: 22px;
+}
+
+.contacts__map {
+  width: 960px;
+  height: 620px;
+}
