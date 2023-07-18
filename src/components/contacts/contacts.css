@@ -45,7 +45,8 @@
   height: 620px;
   overflow: hidden;
   cursor: grab;
-  padding-bottom: 100px;
+  margin-bottom: 80px;
+  filter: brightness(80%) contrast(170%);
 }
 
 .mapboxgl-marker {

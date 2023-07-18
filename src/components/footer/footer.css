@@ -3,7 +3,16 @@
   display: flex;
   justify-content: center;
   background-color: #030303;
-  height: 150px;
+  height: 400px;
+  flex-direction: column;
+}
+
+.footer__wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border-bottom: 3px solid #666666;
+  height: 65%;
 }
 
 .footer {
@@ -11,4 +20,116 @@
   max-width: 1440px;
   align-items: center;
   width: 100%;
+  flex-direction: column;
+}
+
+.footer__links {
+  display: flex;
+  width: 100%;
+  padding-top: 80px;
+}
+
+.footer__logo-link {
+  display: flex;
+  text-decoration: none;
+}
+
+.footer__logo-link:hover {
+  filter: invert(70%) sepia(11%) saturate(1104%) hue-rotate(356deg)
+    brightness(200%) contrast(82%);
+}
+
+.footer__logo {
+  background-image: url("../../public/icons/logo.svg");
+  width: 50px;
+  height: 30px;
+  cursor: pointer;
+  padding-right: 30px;
+  background-repeat: no-repeat;
+  background-position: 5px;
+}
+
+.footer__title {
+  text-transform: uppercase;
+  color: #fff;
+  font-family: "Forum Regular";
+  cursor: pointer;
+  font-size: 28px;
+  letter-spacing: 5px;
+  font-weight: 100;
+  margin: 0;
+}
+
+.footer__nav-list {
+  display: grid;
+  grid-template-columns: 100px 100px;
+  list-style: none;
+  margin: 0;
+  grid-gap: 30px 160px;
+}
+
+.social__list {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  column-gap: 25px;
+}
+
+.social__item {
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+}
+
+.social__item:hover {
+  filter: invert(50%) sepia(11%) saturate(1104%) hue-rotate(356deg)
+    brightness(100%) contrast(82%);
+}
+
+.social__link {
+  display: block;
+  width: 48px;
+  height: 48px;
+}
+
+.footer__nav {
+  padding-left: 100px;
+}
+
+.footer__social {
+  margin-left: auto;
+  padding-top: 80px;
+}
+
+.footer__sub-wrapper {
+  width: 100%;
+  height: 35%;
+  display: flex;
+  justify-content: center;
+}
+
+.footer__subtitles {
+  width: 100%;
+  max-width: 1440px;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  align-items: center;
+}
+
+.footer__year,
+.github-link {
+  font-family: "Roboto Thin";
+  font-size: 22px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer__year {
+  cursor: default;
+}
+
+.github-link:hover {
+  color: #9d8665;
 }

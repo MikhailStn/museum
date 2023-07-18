@@ -22,8 +22,6 @@
 }
 
 .gallery__images-wrapper {
-  position: relative;
-  padding: calc(var(--padding) / 2) 0 calc(var(--padding) * 2);
   height: 2000px;
   overflow-y: hidden;
 }
@@ -39,4 +37,9 @@
   max-width: 1440px;
   max-height: 3000px;
   overflow: hidden;
+}
+
+.gallery__images:nth-child(1),
+.gallery__images:nth-child(11) {
+  margin-top: 50px;
 }
