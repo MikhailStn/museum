@@ -3,7 +3,7 @@ import { virualTourCards } from '../../data/virtualTourCards';
 
 export function VirtualTour() {
   return (
-    <div className="virtual-tour__container">
+    <div className="virtual-tour__container" id="visiting">
       <section className="virtual-tour">
         <h2 className="virtual-tour__title">virtual tour</h2>
         <div className="virtual-tour__cards">
@@ -12,7 +12,7 @@ export function VirtualTour() {
               backgroundImage: `url('${el.image}')`,
             };
             return (
-              <a className="virtual-tour__link" href="" key={el.id}>
+              <a className="virtual-tour__link" href={el.href} target="_blank" key={el.id}>
                 <div className="virtual-tour__card">
                   <div className="virtual-tour__bg" style={backroundImage}></div>
                   <h3 className="virtual-tour__subtitle">{el.name}</h3>

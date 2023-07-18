@@ -4,7 +4,7 @@ import { VideoSlider } from './videoSlider';
 
 export function VideoJourney() {
   return (
-    <div className="video__container">
+    <div className="video__container" id="video">
       <section className="video">
         <div className="video__title-section">
           <h2 className="video__title">video journey</h2>

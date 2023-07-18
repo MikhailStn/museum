@@ -4,7 +4,7 @@ import after from '../../../public/images/explore_slider/after.jpg';
 
 export function PictureExplore() {
   return (
-    <div className="picture-explore__container">
+    <div className="picture-explore__container" id="eplore">
       <section className="picture-explore">
         <div className="picture-explore__description">
           <h2 className="picture-explore__title">picture explore</h2>

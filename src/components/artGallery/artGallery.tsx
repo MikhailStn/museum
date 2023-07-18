@@ -3,7 +3,7 @@ import { galleryImages } from '../../data/artGallery';
 
 export function ArtGallery() {
   return (
-    <div className="gallery__container">
+    <div className="gallery__container" id="gallery">
       <section className="gallery">
         <h2 className="gallery__title">art gallery</h2>
         <div className="gallery__images-wrapper">

@@ -23,12 +23,13 @@
   width: 100%;
 }
 
-.header__logo-wrapper {
+.header__logo-link {
   display: flex;
   align-items: center;
+  text-decoration: none;
 }
 
-.header__logo-wrapper:hover {
+.header__logo-link:hover {
   filter: invert(70%) sepia(11%) saturate(1104%) hue-rotate(356deg) brightness(200%) contrast(82%);
 }
 
@@ -69,6 +70,7 @@
   letter-spacing: 2px;
   font-family: 'Roboto Light';
   cursor: pointer;
+  text-decoration: none;
 }
 
 .nav__link:hover {

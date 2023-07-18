@@ -16,7 +16,7 @@
   letter-spacing: 5px;
   color: #9d8665;
   text-transform: uppercase;
-  font-family: "Forum Regular";
+  font-family: 'Forum Regular';
   font-weight: 100;
   margin-top: 80px;
   border-bottom: 3px solid #710707;
@@ -36,11 +36,21 @@
 }
 
 .contacts__description-sub {
-  font-family: "Roboto Light";
+  font-family: 'Roboto Light';
   font-size: 22px;
 }
 
 .contacts__map {
   width: 960px;
   height: 620px;
+  overflow: hidden;
+  cursor: grab;
+  padding-bottom: 100px;
+}
+
+.mapboxgl-marker {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0s;
 }

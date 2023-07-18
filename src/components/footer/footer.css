@@ -1,0 +1,14 @@
+.footer__container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #030303;
+  height: 150px;
+}
+
+.footer {
+  display: flex;
+  max-width: 1440px;
+  align-items: center;
+  width: 100%;
+}
