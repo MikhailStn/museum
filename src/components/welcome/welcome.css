@@ -63,7 +63,6 @@
   width: 1000px;
   overflow: hidden;
   margin-left: -160px;
-  cursor: col-resize;
 }
 
 .welcome__slider {
@@ -129,6 +128,14 @@
 
 .slider__dot:hover {
   color: #9d8665;
+}
+
+.slider__arrow {
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 28px;
 }
 
 .slider__arrow:hover {

@@ -1,7 +1,14 @@
 import './welcome.css';
 import { Slider } from './slider';
+import { useDispatch, useSelector } from 'react-redux';
+import { RootState } from '../../types';
+import { SliderDots } from './sliderDots';
 
 export function WelcomePage() {
+  const dispatch = useDispatch();
+  const state = useSelector((state: RootState) => state.welcomeSliderReducer);
+  const numOfSlider = useSelector((state: RootState) => state.welcomeSliderReducer.numberOfSlide);
+  const margin = useSelector((state: RootState) => state.welcomeSliderReducer.margin);
   return (
     <div className="welcome__container">
       <section className="welcome">
@@ -19,23 +26,31 @@ export function WelcomePage() {
             <button className="welcome__button">Discover the Louvre</button>
           </form>
         </div>
-        <Slider />
+        <Slider margin={margin} />
         <div className="slider__controls">
           <div className="slider__counter">
-            <span>01</span>
+            <span>0{numOfSlider}</span>
             <span>|</span>
             <span>05</span>
           </div>
-          <div className="slider__dots">
-            <span className="slider__dot">■</span>
-            <span className="slider__dot">■</span>
-            <span className="slider__dot">■</span>
-            <span className="slider__dot">■</span>
-            <span className="slider__dot">■</span>
-          </div>
+          <SliderDots />
           <div className="slider__arrows">
-            <span className="slider__arrow">←</span>
-            <span className="slider__arrow">→</span>
+            <button
+              className="slider__arrow"
+              onClick={() => {
+                dispatch({ type: 'GO_PREV_SLIDE', payload: state });
+              }}
+            >
+              ←
+            </button>
+            <button
+              className="slider__arrow"
+              onClick={() => {
+                dispatch({ type: 'GO_NEXT_SLIDE', payload: state });
+              }}
+            >
+              →
+            </button>
           </div>
         </div>
       </section>
