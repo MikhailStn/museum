@@ -83,3 +83,43 @@
   color: #9d8665;
   border-bottom: 2px solid #9d8665;
 }
+
+@media (max-width: 1440px) {
+  
+  .virtual-tour {
+    padding: 0 20px;
+  }
+
+  .virtual-tour__title {
+    font-size: 50px;
+    margin-bottom: 60px;
+  }
+
+  .virtual-tour__cards {
+    justify-content: center;
+  }
+
+  .virtual-tour__bg {
+    width: 330px;
+    height: 215px;
+  }
+
+  .virtual-tour__cards {
+    column-gap: 100px;
+    row-gap: 30px;
+  }
+
+  .virtual-tour__subtitle {
+    font-size: 28px;
+    letter-spacing: 3px;
+  }
+
+  .virtual-tour__sub-top {
+    font-size: 20px;
+  }
+
+  .virtual-tour__sub-bottom {
+    font-size: 16px;
+  }
+  
+}

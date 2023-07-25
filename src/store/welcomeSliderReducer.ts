@@ -17,7 +17,7 @@ export const welcomeSliderReducer = (state = defaultState, action: SliderActions
       } else {
         return {
           ...state,
-          margin: state.margin - 1000,
+          margin: state.margin - 100,
           numberOfSlide: state.numberOfSlide + 1,
         };
       }
@@ -25,13 +25,13 @@ export const welcomeSliderReducer = (state = defaultState, action: SliderActions
       if (state.numberOfSlide == 1) {
         return {
           ...state,
-          margin: -4000,
+          margin: -400,
           numberOfSlide: 5,
         };
       } else {
         return {
           ...state,
-          margin: state.margin + 1000,
+          margin: state.margin + 100,
           numberOfSlide: state.numberOfSlide - 1,
         };
       }
@@ -44,25 +44,25 @@ export const welcomeSliderReducer = (state = defaultState, action: SliderActions
     case 'SHOW_2':
       return {
         ...state,
-        margin: -1000,
+        margin: -100,
         numberOfSlide: 2,
       };
     case 'SHOW_3':
       return {
         ...state,
-        margin: -2000,
+        margin: -200,
         numberOfSlide: 3,
       };
     case 'SHOW_4':
       return {
         ...state,
-        margin: -3000,
+        margin: -300,
         numberOfSlide: 4,
       };
     case 'SHOW_5':
       return {
         ...state,
-        margin: -4000,
+        margin: -400,
         numberOfSlide: 5,
       };
     default:

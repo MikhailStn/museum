@@ -143,16 +143,21 @@
 }
 
 @media (max-width: 1440px) {
+  .welcome__container {
+    height: 585px;
+  }
+
   .welcome {
     display: grid;
     grid-template-columns: 400px 700px;
-    padding: 0 60px;
+    padding: 0 20px;
     justify-content: center;
     box-sizing: border-box;
   }
 
   .welcome__section {
     min-width: 400px;
+    margin-left: 60px;
   }
 
   .welcome__title {
@@ -190,8 +195,19 @@
   }
 
   .slider__wrapper {
-    margin-left: -95px;
+    margin-left: -60px;
     width: 700px;
+  }
+
+  .slider__overlay {
+    height: 525px;
+  }
+
+  .slider__controls {
+    width: auto;
+    margin-top: -65px;
+    padding-left: 555px;
+    max-width: none;
   }
 
 }
