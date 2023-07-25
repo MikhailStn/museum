@@ -141,3 +141,57 @@
 .slider__arrow:hover {
   color: #9d8665;
 }
+
+@media (max-width: 1440px) {
+  .welcome {
+    display: grid;
+    grid-template-columns: 400px 700px;
+    padding: 0 60px;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+
+  .welcome__section {
+    min-width: 400px;
+  }
+
+  .welcome__title {
+    font-size: 50px;
+    padding-top: 0;
+    line-height: 100px;
+  }
+
+  .welcome__subtitle {
+    font-size: 24px;
+  }
+
+  .welcome__button {
+    width: 300px;
+    height: 60px;
+  }
+  
+  .welcome__subtitle {
+    padding-top: 10px;
+  }
+
+  .welcome__button {
+    margin-top: 50px;
+    font-size: 20px;
+  }
+
+  .slider__el {
+    width: 700px;
+    height: 525px;
+    background-size: cover;
+  }
+
+  .welcome__slider {
+    width: 3500px;
+  }
+
+  .slider__wrapper {
+    margin-left: -95px;
+    width: 700px;
+  }
+
+}

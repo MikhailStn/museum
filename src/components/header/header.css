@@ -76,3 +76,20 @@
 .nav__link:hover {
   color: #9d8665;
 }
+
+
+@media (max-width: 1440px) {
+
+  .header {
+    padding: 0 60px;
+  }
+
+  .header__container {
+    height: 130px;
+  }
+
+  .header__navigation {
+    display: none;
+  }
+  
+}

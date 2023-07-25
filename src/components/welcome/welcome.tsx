@@ -1,21 +1,25 @@
-import './welcome.css';
-import { Slider } from './slider';
-import { useDispatch, useSelector } from 'react-redux';
-import { RootState } from '../../types';
-import { SliderDots } from './sliderDots';
+import "./welcome.css";
+import { Slider } from "./slider";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "../../types";
+import { SliderDots } from "./sliderDots";
 
 export function WelcomePage() {
   const dispatch = useDispatch();
   const state = useSelector((state: RootState) => state.welcomeSliderReducer);
-  const numOfSlider = useSelector((state: RootState) => state.welcomeSliderReducer.numberOfSlide);
-  const margin = useSelector((state: RootState) => state.welcomeSliderReducer.margin);
+  const numOfSlider = useSelector(
+    (state: RootState) => state.welcomeSliderReducer.numberOfSlide
+  );
+  const margin = useSelector(
+    (state: RootState) => state.welcomeSliderReducer.margin
+  );
   return (
     <div className="welcome__container">
       <section className="welcome">
         <div className="welcome__section">
           <h1 className="welcome__title">
             welcome
-            <br />
+            <br className="welcome__separator" />
             to the louvre
           </h1>
           <p className="welcome__subtitle">From the castle to the museum</p>
@@ -38,7 +42,7 @@ export function WelcomePage() {
             <button
               className="slider__arrow"
               onClick={() => {
-                dispatch({ type: 'GO_PREV_SLIDE', payload: state });
+                dispatch({ type: "GO_PREV_SLIDE", payload: state });
               }}
             >
               ←
@@ -46,7 +50,7 @@ export function WelcomePage() {
             <button
               className="slider__arrow"
               onClick={() => {
-                dispatch({ type: 'GO_NEXT_SLIDE', payload: state });
+                dispatch({ type: "GO_NEXT_SLIDE", payload: state });
               }}
             >
               →
