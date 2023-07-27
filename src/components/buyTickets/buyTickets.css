@@ -251,4 +251,25 @@
     height: 40px;
     border: 2px solid black;
   }
+
+  .buy-tickets__title {
+    font-size: 40px;
+    margin-top: 50px;
+    margin-bottom: 35px;
+  }
+
+  .buy-tickets__logo {
+    width: 444px;
+    height: 340px;
+  }
+
+  .buy-tickets {
+    padding-bottom: 70px;
+  }
+}
+
+@media (max-width: 800px) {
+  .buy-tickets__content {
+    justify-content: space-between;
+  }
 }

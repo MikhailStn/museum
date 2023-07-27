@@ -135,7 +135,6 @@
 }
 
 @media (max-width: 1460px) {
-  
   .footer__wrapper,
   .footer__subtitles {
     padding: 0 20px;
@@ -153,5 +152,24 @@
   .footer__nav-list {
     grid-gap: 30px 100px;
   }
+}
 
+@media (max-width: 1023px) {
+  .footer__wrapper {
+    height: 80%;
+  }
+  .footer__links {
+    display: grid;
+    grid-template-columns: 200px 120px;
+  }
+
+  .footer__nav-list {
+    padding-left: 200px;
+  }
+
+  .footer__social {
+    padding-top: 40px;
+    padding-bottom: 30px;
+    padding-left: 190%;
+  }
 }

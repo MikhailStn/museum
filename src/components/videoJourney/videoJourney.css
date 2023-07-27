@@ -55,7 +55,8 @@
 }
 
 .video__btn:hover {
-  filter: invert(70%) sepia(11%) saturate(1104%) hue-rotate(356deg) brightness(200%) contrast(82%);
+  filter: invert(70%) sepia(11%) saturate(1104%) hue-rotate(356deg)
+    brightness(200%) contrast(82%);
 }
 
 .video__controls {
@@ -159,7 +160,13 @@
 
 .video__controls-progress,
 .video__controls-progress-vol {
-  background: linear-gradient(to right, #710707 0%, #710707 50%, #c8c8c8 40%, #c8c8c8 100%);
+  background: linear-gradient(
+    to right,
+    #710707 0%,
+    #710707 50%,
+    #c8c8c8 40%,
+    #c8c8c8 100%
+  );
   outline: none;
   height: 8px;
   transition: background 450ms ease-in;
@@ -194,7 +201,8 @@
   background-size: cover;
   background-image: url("../../../public/icons/play.svg");
   background-size: 50px;
-  filter: invert(70%) sepia(100%) saturate(0%) hue-rotate(356deg) brightness(200%) contrast(82%);
+  filter: invert(70%) sepia(100%) saturate(0%) hue-rotate(356deg)
+    brightness(200%) contrast(82%);
   cursor: pointer;
   margin-top: -50px;
 }
@@ -268,7 +276,6 @@
 }
 
 @media (max-width: 1460px) {
-  
   .video__section {
     padding: 0 20px;
     box-sizing: border-box;
@@ -325,15 +332,29 @@
     width: 45px;
     height: 45px;
     background-size: contain;
-    margin-top: -55px
+    margin-top: -55px;
   }
-
 }
 
 @media (max-width: 1200px) {
-  
   .video__slider {
     height: 170px;
   }
+}
 
+@media (max-width: 1023px) {
+  .video__title {
+    font-size: 40px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
+
+  .video__slider-item {
+    width: calc(100vw / 2.25);
+    height: 200px;
+  }
+
+  .video__slider {
+    height: 200px;
+  }
 }

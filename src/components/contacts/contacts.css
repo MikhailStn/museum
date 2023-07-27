@@ -16,7 +16,7 @@
   letter-spacing: 5px;
   color: #9d8665;
   text-transform: uppercase;
-  font-family: 'Forum Regular';
+  font-family: "Forum Regular";
   font-weight: 100;
   margin-top: 80px;
   border-bottom: 3px solid #710707;
@@ -36,7 +36,7 @@
 }
 
 .contacts__description-sub {
-  font-family: 'Roboto Light';
+  font-family: "Roboto Light";
   font-size: 22px;
 }
 
@@ -57,7 +57,6 @@
 }
 
 @media (max-width: 1460px) {
-
   .contacts {
     padding: 0 20px;
     box-sizing: border-box;
@@ -86,5 +85,36 @@
   .contacts__content {
     justify-content: space-evenly;
   }
-  
+}
+
+@media (max-width: 1023px) {
+  .contacts__title {
+    font-size: 40px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
+
+  .contacts__content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contacts__map {
+    width: 728px;
+    height: 476px;
+    margin-top: 30px;
+  }
+
+  .contacts__description {
+    width: 728px;
+  }
+
+  .contacts__description-title {
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
+
+  .contacts__description-sub {
+    margin: 10px 0;
+  }
 }

@@ -1,7 +1,6 @@
 import "./header.css";
 import { navItems } from "../../data/navMenu";
 import { useDispatch, useSelector } from "react-redux";
-import arrow from "../../../public/icons/arr_burger.svg";
 import { RootState } from "../../types/rootState";
 
 export function Header() {
@@ -110,7 +109,6 @@ export function Header() {
                   >
                     {el.title}
                   </a>
-                  <img src={arrow}></img>
                 </li>
               ))}
             </ul>

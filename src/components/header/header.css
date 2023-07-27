@@ -104,7 +104,6 @@
 
 .header__burger-menu {
   width: 260px;
-  height: 585px;
   background-color: #030303;
   z-index: 100;
   position: absolute;
@@ -118,7 +117,7 @@
   row-gap: 20px;
   font-size: 20px;
   color: #fff;
-  padding-left: 40px;
+  padding-left: 80px;
   padding-right: 0;
   list-style: none;
 }
@@ -134,6 +133,7 @@
   font-family: "Roboto Light";
   width: 90px;
   display: block;
+  letter-spacing: 3px;
 }
 
 .header__overlay {
@@ -179,7 +179,7 @@
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   .desktop-nav {
     display: none;
   }
@@ -198,5 +198,9 @@
 
   .header__overlay {
     display: block;
+  }
+
+  .header__container {
+    height: 110px;
   }
 }

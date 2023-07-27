@@ -6,7 +6,7 @@ const defaultState = {
   line2: { marginTop: "12.5px", opacity: 1, left: "0" },
   line3: { marginTop: "3", transform: "rotate(0)" },
   welcomeSectionVisibility: { opacity: 1, visibility: "visible" },
-  menuVisibility: { left: "-260px" },
+  menuVisibility: { left: "-100%" },
   overlayVisibility: { opacity: 0, visibility: "hidden" },
 };
 
@@ -32,7 +32,7 @@ export const burgerMenuReducer = (
         line2: { marginTop: "12px", opacity: 1, left: "0" },
         line3: { marginTop: "3", transform: "rotate(0)" },
         welcomeSectionVisibility: { opacity: 1, visibility: "visible" },
-        menuVisibility: { left: "-260px" },
+        menuVisibility: { left: "-100%" },
         overlayVisibility: { opacity: 0, visibility: "hidden" },
       };
     default:
