@@ -6,7 +6,7 @@
 }
 
 .virtual-tour {
-  padding-bottom: 50px;
+  padding-bottom: 70px;
 }
 
 .virtual-tour {
@@ -90,6 +90,7 @@
 @media (max-width: 1460px) {
   .virtual-tour {
     padding: 0 20px;
+    padding-bottom: 70px;
   }
 
   .virtual-tour__title {
@@ -144,9 +145,5 @@
 
   .virtual-tour__subtitle {
     font-size: 22px;
-  }
-
-  .virtual-tour {
-    padding-bottom: 65px;
   }
 }

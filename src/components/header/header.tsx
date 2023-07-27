@@ -18,7 +18,6 @@ export function Header() {
         overlayVisibility: { opacity: 0, visibility: "hidden" },
       },
     });
-    console.log(state);
   };
 
   const showMenu = () => {
@@ -32,7 +31,6 @@ export function Header() {
         overlayVisibility: { opacity: 1, visibility: "visible" },
       },
     });
-    console.log(state);
   };
 
   return (
