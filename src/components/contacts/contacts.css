@@ -55,3 +55,36 @@
   left: 0;
   transition: 0s;
 }
+
+@media (max-width: 1460px) {
+
+  .contacts {
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
+  .contacts__title {
+    font-size: 50px;
+    margin-top: 70px;
+    margin-bottom: 70px;
+  }
+
+  .contacts__map {
+    width: 694px;
+    height: 454px;
+    margin-bottom: 60px;
+  }
+
+  .contacts__description-title {
+    font-size: 24px;
+  }
+
+  .contacts__description-sub {
+    font-size: 20px;
+  }
+
+  .contacts__content {
+    justify-content: space-evenly;
+  }
+  
+}

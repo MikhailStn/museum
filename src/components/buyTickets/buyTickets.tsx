@@ -1,5 +1,4 @@
 import "./buyTickets.css";
-import ticketsLogo from "../../../public/images/tickets_img.jpg";
 import { TicketForm } from "./ticketForm";
 
 export function BuyTickets() {
@@ -8,10 +7,9 @@ export function BuyTickets() {
       <section className="buy-tickets">
         <h2 className="buy-tickets__title">buy tickets</h2>
         <div className="buy-tickets__content">
-          <img
+          <div
             className="buy-tickets__logo"
-            src={ticketsLogo}
-          ></img>
+          ></div>
           <TicketForm />
         </div>
       </section>

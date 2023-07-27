@@ -133,3 +133,25 @@
 .github-link:hover {
   color: #9d8665;
 }
+
+@media (max-width: 1460px) {
+  
+  .footer__wrapper,
+  .footer__subtitles {
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
+  .footer__links {
+    padding-top: 60px;
+  }
+
+  .footer__nav {
+    padding-left: 0;
+  }
+
+  .footer__nav-list {
+    grid-gap: 30px 100px;
+  }
+
+}

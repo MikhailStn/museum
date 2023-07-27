@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { RootState } from '../../types';
+import { RootState } from '../../types/rootState';
 
 export function SliderDots() {
   const dispatch = useDispatch();

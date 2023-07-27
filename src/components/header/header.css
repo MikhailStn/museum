@@ -1,11 +1,11 @@
 @font-face {
-  font-family: 'Forum Regular';
-  src: url('../../fonts/Forum-Regular.ttf');
+  font-family: "Forum Regular";
+  src: url("../../fonts/Forum-Regular.ttf");
 }
 
 @font-face {
-  font-family: 'Roboto Thin';
-  src: url('../../fonts/Roboto-Thin.ttf');
+  font-family: "Roboto Thin";
+  src: url("../../fonts/Roboto-Thin.ttf");
 }
 
 .header__container {
@@ -30,11 +30,12 @@
 }
 
 .header__logo-link:hover {
-  filter: invert(70%) sepia(11%) saturate(1104%) hue-rotate(356deg) brightness(200%) contrast(82%);
+  filter: invert(70%) sepia(11%) saturate(1104%) hue-rotate(356deg)
+    brightness(200%) contrast(82%);
 }
 
 .header__logo {
-  background-image: url('../../public/icons/logo.svg');
+  background-image: url("../../public/icons/logo.svg");
   width: 50px;
   height: 30px;
   cursor: pointer;
@@ -46,7 +47,7 @@
 .header__title {
   text-transform: uppercase;
   color: #fff;
-  font-family: 'Forum Regular';
+  font-family: "Forum Regular";
   cursor: pointer;
   font-size: 28px;
   letter-spacing: 5px;
@@ -68,7 +69,7 @@
   color: #fff;
   font-size: 22px;
   letter-spacing: 2px;
-  font-family: 'Roboto Light';
+  font-family: "Roboto Light";
   cursor: pointer;
   text-decoration: none;
 }
@@ -77,9 +78,94 @@
   color: #9d8665;
 }
 
+.mobile-nav {
+  display: none;
+}
 
-@media (max-width: 1440px) {
+.header__burger-btn {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 40px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  z-index: 12;
+}
 
+.header__burger-line {
+  width: 80%;
+  height: 2px;
+  background: #fff;
+  margin: 3px 0;
+}
+
+.header__burger-menu {
+  width: 260px;
+  height: 585px;
+  background-color: #030303;
+  z-index: 100;
+  position: absolute;
+  top: 130px;
+  left: 0;
+}
+
+.burger__nav-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  font-size: 20px;
+  color: #fff;
+  padding-left: 40px;
+  padding-right: 0;
+  list-style: none;
+}
+
+.burger__nav-item {
+  display: flex;
+  cursor: pointer;
+}
+
+.burger__nav-link {
+  color: #fff;
+  text-decoration: none;
+  font-family: "Roboto Light";
+  width: 90px;
+  display: block;
+}
+
+.header__overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: #03030370;
+  left: 0;
+  top: 0;
+  z-index: 11;
+  display: none;
+}
+
+.header__logo-link {
+  z-index: 12;
+}
+
+.line1 {
+  transform: rotate(45deg);
+}
+
+.line2 {
+  opacity: 0;
+  left: -60px;
+}
+
+.line3 {
+  margin-top: -13.5px;
+  transform: rotate(135deg);
+}
+
+@media (max-width: 1460px) {
   .header {
     padding: 0 20px;
   }
@@ -91,5 +177,26 @@
   .nav__list {
     column-gap: 40px;
   }
-  
+}
+
+@media (max-width: 1024px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: flex;
+  }
+
+  .header__burger-btn {
+    display: flex;
+  }
+
+  .header {
+    justify-content: space-between;
+  }
+
+  .header__overlay {
+    display: block;
+  }
 }

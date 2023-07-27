@@ -194,3 +194,61 @@
 .buy-tickets__amount-subtitle {
   cursor: default;
 }
+
+.buy-tickets__logo {
+  background-image: url("../../../public/images/tickets_img.jpg");
+  background-size: cover;
+  width: 720px;
+  height: 550px;
+}
+
+@media (max-width: 1460px) {
+  .buy-tickets {
+    padding: 0 20px;
+    box-sizing: border-box;
+    padding-bottom: 60px;
+  }
+
+  .buy-tickets__title {
+    font-size: 50px;
+    margin-top: 70px;
+    margin-bottom: 60px;
+  }
+
+  .buy-tickets__logo {
+    width: 700px;
+    height: 440px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .buy-tickets__types {
+    display: none;
+  }
+
+  .buy-tickets__form {
+    width: auto;
+  }
+
+  .buy-tickets__content {
+    justify-content: space-evenly;
+  }
+
+  .buy-tickets__amount {
+    align-items: flex-start;
+  }
+
+  .buy-tickets__amount-title {
+    font-size: 24px;
+  }
+
+  .buy-tickets__amount-subtitle {
+    font-size: 18px;
+  }
+
+  .buy-tickets__amount-controls {
+    width: 120px;
+    height: 40px;
+    border: 2px solid black;
+  }
+}

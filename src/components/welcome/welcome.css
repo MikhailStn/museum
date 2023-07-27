@@ -142,7 +142,7 @@
   color: #9d8665;
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1460px) {
   .welcome__container {
     height: 585px;
   }

@@ -1,8 +1,8 @@
 import "./welcome.css";
 import { Slider } from "./slider";
 import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "../../types";
 import { SliderDots } from "./sliderDots";
+import { RootState } from "../../types/rootState";
 
 export function WelcomePage() {
   const dispatch = useDispatch();
@@ -13,10 +13,16 @@ export function WelcomePage() {
   const margin = useSelector(
     (state: RootState) => state.welcomeSliderReducer.margin
   );
+  const welcomeSectionState = useSelector(
+    (state: RootState) => state.burgerMenuReducer.welcomeSectionVisibility
+  );
   return (
     <div className="welcome__container">
       <section className="welcome">
-        <div className="welcome__section">
+        <div
+          className="welcome__section"
+          style={welcomeSectionState}
+        >
           <h1 className="welcome__title">
             welcome
             <br className="welcome__separator" />
