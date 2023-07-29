@@ -35,12 +35,11 @@
 }
 
 .footer__logo-link:hover {
-  filter: invert(70%) sepia(11%) saturate(1104%) hue-rotate(356deg)
-    brightness(200%) contrast(82%);
+  filter: invert(70%) sepia(11%) saturate(1104%) hue-rotate(356deg) brightness(200%) contrast(82%);
 }
 
 .footer__logo {
-  background-image: url("../../public/icons/logo.svg");
+  background-image: url('../../public/icons/logo.svg');
   width: 50px;
   height: 30px;
   cursor: pointer;
@@ -52,7 +51,7 @@
 .footer__title {
   text-transform: uppercase;
   color: #fff;
-  font-family: "Forum Regular";
+  font-family: 'Forum Regular';
   cursor: pointer;
   font-size: 28px;
   letter-spacing: 5px;
@@ -83,8 +82,7 @@
 }
 
 .social__item:hover {
-  filter: invert(50%) sepia(11%) saturate(1104%) hue-rotate(356deg)
-    brightness(100%) contrast(82%);
+  filter: invert(50%) sepia(11%) saturate(1104%) hue-rotate(356deg) brightness(100%) contrast(82%);
 }
 
 .social__link {
@@ -120,7 +118,7 @@
 
 .footer__year,
 .github-link {
-  font-family: "Roboto Thin";
+  font-family: 'Roboto Thin';
   font-size: 22px;
   color: #fff;
   text-decoration: none;
@@ -171,5 +169,76 @@
     padding-top: 40px;
     padding-bottom: 30px;
     padding-left: 190%;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 40px;
+    padding-top: 40px;
+  }
+
+  .footer__social {
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer__nav-list {
+    padding-left: 0;
+  }
+
+  .footer__nav-list {
+    grid-template-columns: 100px 100px 100px;
+  }
+
+  .footer__logo {
+    padding-right: 10px;
+  }
+
+  .footer__wrapper {
+    height: 120%;
+  }
+  
+  .nav__link {
+    font-family: 'Roboto Thin';
+  }
+
+  .nav__link {
+    font-size: 18px;
+  }
+
+  .nav__item {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 540px) {
+
+  .footer__container {
+    height: 450px;
+  }
+
+  .footer__nav-list {
+    grid-gap: 30px 20px;
+    grid-template-columns: 100px 100px;
+  }
+
+  .nav__link {
+    font-size: 16px;
+  }
+
+  .footer__sub-wrapper {
+    height: 15%;
+  }
+
+  .social__list {
+    max-width: 200px;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 20px;
   }
 }

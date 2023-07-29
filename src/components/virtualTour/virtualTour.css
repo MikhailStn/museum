@@ -139,11 +139,31 @@
   }
 
   .virtual-tour__cards {
-    column-gap: 50px;
+    column-gap: 30px;
     row-gap: 15px;
   }
 
   .virtual-tour__subtitle {
     font-size: 22px;
   }
+
+  .virtual-tour__subtitle {
+    width: auto;
+  }
+}
+
+@media (max-width: 767px) {
+  
+  .virtual-tour__title {
+    font-size: 28px;
+  }
+
+  .virtual-tour__subtitle {
+    font-size: 18px;
+  }
+
+  .virtual-tour__sub-top {
+    font-size: 16px;
+  }
+
 }
