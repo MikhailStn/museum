@@ -1,5 +1,7 @@
 import './artGallery.css';
 import { galleryImages } from '../../data/artGallery';
+import { useRef } from 'react';
+import { images } from '../../App';
 
 export function ArtGallery() {
   return (
@@ -9,7 +11,9 @@ export function ArtGallery() {
         <div className="gallery__images-wrapper">
           <div className="gallery__images">
             {galleryImages.map((el) => {
-              return <img className="gallery__image" key={el.id} src={el.path}></img>;
+              const imageRef = useRef(null)
+              images.push(imageRef)
+              return <img ref={imageRef} className="gallery__image" key={el.id} src={el.path}></img>;
             })}
           </div>
         </div>
