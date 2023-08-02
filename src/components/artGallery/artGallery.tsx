@@ -1,7 +1,13 @@
 import './artGallery.css';
 import { galleryImages } from '../../data/artGallery';
-import { useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { images } from '../../App';
+
+function shuffle(array: { id: string; path: string }[]): { id: string; path: string }[] {
+  return array.sort(() => Math.random() - 0.5);
+}
+
+const shuffledImages = shuffle(galleryImages)
 
 export function ArtGallery() {
   return (
@@ -10,10 +16,30 @@ export function ArtGallery() {
         <h2 className="gallery__title">art gallery</h2>
         <div className="gallery__images-wrapper">
           <div className="gallery__images">
-            {galleryImages.map((el) => {
-              const imageRef = useRef(null)
-              images.push(imageRef)
-              return <img ref={imageRef} className="gallery__image" key={el.id} src={el.path}></img>;
+            {shuffledImages.map((el) => {
+              const imageRef = useRef(null);
+              images.push(imageRef);
+              const [imagePosition, setPosition] = useState({ top: 20, transform: 'scale(0.95) translateY(100px)', opacity: 0.5 });
+              useEffect(() => {
+                function callback(entries: { isIntersecting: boolean }[]) {
+                  if (entries[0].isIntersecting) {
+                    setPosition({ top: 0, transform: 'scale(1) translateY(0px)', opacity: 1 });
+                  }
+                }
+                const observer = new IntersectionObserver(callback);
+                if (imageRef.current) {
+                  observer.observe(imageRef.current);
+                }
+              }, []);
+              return (
+                <img
+                  ref={imageRef}
+                  style={imagePosition}
+                  className="gallery__image"
+                  key={el.id}
+                  src={el.path}
+                ></img>
+              );
             })}
           </div>
         </div>
