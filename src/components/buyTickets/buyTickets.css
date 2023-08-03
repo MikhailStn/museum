@@ -158,6 +158,7 @@
   background-color: transparent;
   cursor: pointer;
   border: none;
+  transition: 0.3s;
 }
 
 .buy-tickets__amount-controls-btn:hover {
@@ -185,6 +186,7 @@
   font-size: 22px;
   border: none;
   margin-top: 20px;
+  transition: 0.3s;
 }
 
 .buy-tickets__button:hover {

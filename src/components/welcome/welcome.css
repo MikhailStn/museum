@@ -53,6 +53,7 @@
   color: #fff;
   cursor: pointer;
   margin-top: 75px;
+  transition: 0.3s;
 }
 
 .welcome__button:hover {
@@ -68,6 +69,7 @@
 .welcome__slider {
   display: flex;
   width: 5000px;
+  transition: 0.3s;
 }
 
 .slider__el {
@@ -81,6 +83,7 @@
   height: 750px;
   pointer-events: none;
   background: linear-gradient(to right, #030303, transparent);
+  transition: 0.3s;
 }
 
 .slider__controls {
@@ -117,6 +120,7 @@
   align-items: center;
   cursor: pointer;
   margin-top: -5px;
+  z-index: 2;
 }
 
 .slider__arrows {
@@ -124,6 +128,10 @@
   display: flex;
   column-gap: 15px;
   font-size: 30px;
+}
+
+.slider__dot {
+  transition: 0.3s;
 }
 
 .slider__dot:hover {
@@ -136,6 +144,7 @@
   border: none;
   cursor: pointer;
   font-size: 28px;
+  transition: 0.3s;
 }
 
 .slider__arrow:hover {

@@ -273,6 +273,58 @@
 
 .video {
   width: 100%;
+  display: none;
+}
+
+.video__el {
+  width: 250px;
+}
+
+.video-slider {
+  padding-bottom: 140px;
+  cursor: pointer;
+}
+
+.control-dots {
+  bottom: -30px !important;
+  background-color: #000000;
+  padding: 10px 0 !important;
+}
+
+.carousel-status {
+  display: none;
+}
+
+.carousel-slider {
+  overflow: visible !important;
+  display: flex;
+  justify-content: center;
+}
+
+.video-btn-left,
+.video-btn-right {
+  background: none;
+  border: none;
+  position: absolute;
+  z-index: 100;
+  color: #c0c0c0;
+  font-size: 26px;
+  bottom: -17px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.video-btn-left {
+  margin-right: 150px;
+}
+
+.video-btn-right {
+  margin-left: 150px;
+}
+
+.video-btn-left:hover,
+.video-btn-right:hover {
+  color: #ffffff;
 }
 
 @media (max-width: 1460px) {
@@ -358,6 +410,10 @@
   .video__btn {
     width: 80px;
     height: 80px;
+  }
+
+  .video-slider {
+    padding-bottom: 90px;
   }
 }
 

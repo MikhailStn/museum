@@ -2,6 +2,7 @@ import './contacts.css';
 import MapboxGL from 'mapbox-gl';
 import ReactMapGL, { Marker } from 'react-map-gl';
 import { markers } from '../../data/markers';
+import 'mapbox-gl/dist/mapbox-gl.css'
 
 export function Contacts() {
   MapboxGL.accessToken =

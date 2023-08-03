@@ -27,6 +27,7 @@
   display: flex;
   align-items: center;
   text-decoration: none;
+  transition: 0.3s;
 }
 
 .header__logo-link:hover {
@@ -72,6 +73,7 @@
   font-family: "Roboto Light";
   cursor: pointer;
   text-decoration: none;
+  transition: 0.3s;
 }
 
 .nav__link:hover {
@@ -109,6 +111,7 @@
   position: absolute;
   top: 130px;
   left: 0;
+  transition: 0.3s;
 }
 
 .burger__nav-list {
@@ -145,6 +148,7 @@
   top: 0;
   z-index: 11;
   display: none;
+  transition: 0.3s;
 }
 
 .header__logo-link {
@@ -153,16 +157,19 @@
 
 .line1 {
   transform: rotate(45deg);
+  transition: 0.3s;
 }
 
 .line2 {
   opacity: 0;
   left: -60px;
+  transition: 0.3s;
 }
 
 .line3 {
   margin-top: -13.5px;
   transform: rotate(135deg);
+  transition: 0.3s;
 }
 
 @media (max-width: 1460px) {

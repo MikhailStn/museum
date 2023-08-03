@@ -1,7 +1,8 @@
 import './artGallery.css';
 import { galleryImages } from '../../data/artGallery';
 import { useEffect, useRef, useState } from 'react';
-import { images } from '../../App';
+
+const images = [];
 
 function shuffle(array: { id: string; path: string }[]): { id: string; path: string }[] {
   return array.sort(() => Math.random() - 0.5);
