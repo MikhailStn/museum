@@ -3,7 +3,6 @@ import { Header } from "./components/header/header";
 import { WelcomePage } from "./components/welcome/welcome";
 import { VirtualTour } from "./components/virtualTour/virtualTour";
 import { PictureExplore } from "./components/pictureExplore/pictureExplore";
-//import { VideoJourney } from "./components/videoJourney/videoJourney1";
 import { VideoJourney } from "./components/videoJourney/VideoJourney";
 import { ArtGallery } from "./components/artGallery/artGallery";
 import { BuyTickets } from "./components/buyTickets/buyTickets";
