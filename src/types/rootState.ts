@@ -11,5 +11,10 @@ export interface RootState {
   welcomeSliderReducer: {
     margin: number;
     numberOfSlide: number;
+    dot1: { color: string } | {};
+    dot2: { color: string } | {};
+    dot3: { color: string } | {};
+    dot4: { color: string } | {};
+    dot5: { color: string } | {};
   };
 }
