@@ -11,26 +11,14 @@ export function VideoSlider() {
       infiniteLoop
       renderArrowPrev={(onClickHandler, hasPrev, label) =>
         hasPrev && (
-          <button
-            type="button"
-            className="video-btn-left"
-            onClick={onClickHandler}
-            title={label}
-            style={{}}
-          >
+          <button type="button" className="video-btn-left" onClick={onClickHandler} title={label} style={{}}>
             «
           </button>
         )
       }
       renderArrowNext={(onClickHandler, hasNext, label) =>
         hasNext && (
-          <button
-            type="button"
-            className="video-btn-right"
-            onClick={onClickHandler}
-            title={label}
-            style={{}}
-          >
+          <button type="button" className="video-btn-right" onClick={onClickHandler} title={label} style={{}}>
             »
           </button>
         )

@@ -31,8 +31,7 @@
 }
 
 .header__logo-link:hover {
-  filter: invert(70%) sepia(11%) saturate(1104%) hue-rotate(356deg)
-    brightness(200%) contrast(82%);
+  filter: invert(70%) sepia(11%) saturate(1104%) hue-rotate(356deg) brightness(200%) contrast(82%);
 }
 
 .header__logo {
@@ -95,6 +94,8 @@
   background-color: transparent;
   border: none;
   z-index: 12;
+  position: relative;
+  top: -5px;
 }
 
 .header__burger-line {
@@ -120,7 +121,7 @@
   row-gap: 20px;
   font-size: 20px;
   color: #fff;
-  padding-left: 80px;
+  padding-left: 100px;
   padding-right: 0;
   list-style: none;
 }
@@ -134,7 +135,7 @@
   color: #fff;
   text-decoration: none;
   font-family: "Roboto Light";
-  width: 90px;
+  width: 130px;
   display: block;
   letter-spacing: 3px;
 }
@@ -212,15 +213,13 @@
   }
 }
 
-
 @media (max-width: 767px) {
-  
   .header__container {
     height: 90px;
   }
 
   .header__title {
-    font-size: 16px;
+    font-size: 20px;
   }
 
   .header__logo {
@@ -229,4 +228,15 @@
     background-size: contain;
   }
 
+  .header__burger-menu {
+    top: 90px;
+  }
+
+  .burger__nav-list {
+    padding-left: 30px;
+  }
+
+  .burger__nav-link {
+    font-size: 18px;
+  }
 }

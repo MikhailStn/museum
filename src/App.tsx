@@ -1,28 +1,16 @@
 import "./App.css";
-import { Header } from "./components/header/header";
-import { WelcomePage } from "./components/welcome/welcome";
-import { VirtualTour } from "./components/virtualTour/virtualTour";
-import { PictureExplore } from "./components/pictureExplore/pictureExplore";
-import { VideoJourney } from "./components/videoJourney/VideoJourney";
-import { ArtGallery } from "./components/artGallery/artGallery";
-import { BuyTickets } from "./components/buyTickets/buyTickets";
-import { Parallax } from "./components/parallax/parallax";
-import { Contacts } from "./components/contacts/contacts";
-import { Footer } from "./components/footer/footer";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import { MainPage } from "./pages/mainPage/mainPage";
+import { BuyTicketPage } from "./pages/buyTicketPage/buyTicketPage";
 
 export function App() {
   return (
-    <div className="wrapper">
-      <Header />
-      <WelcomePage />
-      <VirtualTour />
-      <PictureExplore />
-      <VideoJourney />
-      <ArtGallery />
-      <BuyTickets />
-      <Parallax />
-      <Contacts />
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<MainPage />}></Route>
+        <Route path="/buy-ticket" element={<BuyTicketPage />}></Route>
+      </Routes>
+    </BrowserRouter>
   );
 }

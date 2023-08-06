@@ -3,13 +3,11 @@ import { TicketForm } from "./ticketForm";
 
 export function BuyTickets() {
   return (
-    <div className="buy-tickets__container" id="buy_ticket">
+    <div className="buy-tickets__container" id="tickets">
       <section className="buy-tickets">
         <h2 className="buy-tickets__title">buy tickets</h2>
         <div className="buy-tickets__content">
-          <div
-            className="buy-tickets__logo"
-          ></div>
+          <div className="buy-tickets__logo"></div>
           <TicketForm />
         </div>
       </section>

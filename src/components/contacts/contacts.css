@@ -16,7 +16,7 @@
   letter-spacing: 5px;
   color: #9d8665;
   text-transform: uppercase;
-  font-family: 'Forum Regular';
+  font-family: "Forum Regular";
   font-weight: 100;
   margin-top: 80px;
   border-bottom: 3px solid #710707;
@@ -36,7 +36,7 @@
 }
 
 .contacts__description-sub {
-  font-family: 'Roboto Light';
+  font-family: "Roboto Light";
   font-size: 22px;
 }
 

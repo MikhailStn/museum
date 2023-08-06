@@ -1,12 +1,11 @@
-import './contacts.css';
-import MapboxGL from 'mapbox-gl';
-import ReactMapGL, { Marker } from 'react-map-gl';
-import { markers } from '../../data/markers';
-import 'mapbox-gl/dist/mapbox-gl.css'
+import "./contacts.css";
+import MapboxGL from "mapbox-gl";
+import ReactMapGL, { Marker } from "react-map-gl";
+import { markers } from "../../data/markers";
+import "mapbox-gl/dist/mapbox-gl.css";
 
 export function Contacts() {
-  MapboxGL.accessToken =
-    'pk.eyJ1IjoibWlraGFpbHN0biIsImEiOiJjbGp6anMxNW8wOWV6M3FtbGtuaTVnMmZuIn0.oqUgJDcA_wHnvBNRT7XMVQ';
+  MapboxGL.accessToken = "pk.eyJ1IjoibWlraGFpbHN0biIsImEiOiJjbGp6anMxNW8wOWV6M3FtbGtuaTVnMmZuIn0.oqUgJDcA_wHnvBNRT7XMVQ";
   return (
     <div className="contacts__container" id="contacts">
       <section className="contacts">
@@ -32,12 +31,7 @@ export function Contacts() {
               mapStyle="mapbox://styles/mapbox/light-v11"
             >
               {markers.map((el) => (
-                <Marker
-                  color={el.color}
-                  key={el.id}
-                  longitude={el.longitude}
-                  latitude={el.latitude}
-                ></Marker>
+                <Marker color={el.color} key={el.id} longitude={el.longitude} latitude={el.latitude}></Marker>
               ))}
             </ReactMapGL>
           </div>

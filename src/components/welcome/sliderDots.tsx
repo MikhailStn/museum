@@ -1,5 +1,5 @@
-import { useDispatch, useSelector } from 'react-redux';
-import { RootState } from '../../types/rootState';
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "../../types/rootState";
 
 export function SliderDots() {
   const dispatch = useDispatch();
@@ -9,7 +9,7 @@ export function SliderDots() {
       <span
         style={state.dot1}
         onClick={() => {
-          dispatch({ type: 'SHOW_1', payload: state });
+          dispatch({ type: "SHOW_1", payload: state });
         }}
         className="slider__dot"
       >
@@ -18,7 +18,7 @@ export function SliderDots() {
       <span
         style={state.dot2}
         onClick={() => {
-          dispatch({ type: 'SHOW_2', payload: state });
+          dispatch({ type: "SHOW_2", payload: state });
         }}
         className="slider__dot"
       >
@@ -27,7 +27,7 @@ export function SliderDots() {
       <span
         style={state.dot3}
         onClick={() => {
-          dispatch({ type: 'SHOW_3', payload: state });
+          dispatch({ type: "SHOW_3", payload: state });
         }}
         className="slider__dot"
       >
@@ -36,7 +36,7 @@ export function SliderDots() {
       <span
         style={state.dot4}
         onClick={() => {
-          dispatch({ type: 'SHOW_4', payload: state });
+          dispatch({ type: "SHOW_4", payload: state });
         }}
         className="slider__dot"
       >
@@ -45,7 +45,7 @@ export function SliderDots() {
       <span
         style={state.dot5}
         onClick={() => {
-          dispatch({ type: 'SHOW_5', payload: state });
+          dispatch({ type: "SHOW_5", payload: state });
         }}
         className="slider__dot"
       >

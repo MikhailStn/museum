@@ -1,4 +1,4 @@
-import { sliderItems } from '../../data/welcomeSlider';
+import { sliderItems } from "../../data/welcomeSlider";
 
 interface SliderProps {
   margin: number;

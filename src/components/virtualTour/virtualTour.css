@@ -75,7 +75,6 @@
   color: black;
   transition: 0.5s;
   opacity: 0.8;
-  
 }
 
 .virtual-tour__link:hover {
@@ -154,7 +153,6 @@
 }
 
 @media (max-width: 767px) {
-  
   .virtual-tour__title {
     font-size: 28px;
   }
@@ -166,5 +164,4 @@
   .virtual-tour__sub-top {
     font-size: 16px;
   }
-
 }

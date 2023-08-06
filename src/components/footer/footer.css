@@ -40,7 +40,7 @@
 }
 
 .footer__logo {
-  background-image: url('../../public/icons/logo.svg');
+  background-image: url("../../public/icons/logo.svg");
   width: 50px;
   height: 30px;
   cursor: pointer;
@@ -52,7 +52,7 @@
 .footer__title {
   text-transform: uppercase;
   color: #fff;
-  font-family: 'Forum Regular';
+  font-family: "Forum Regular";
   cursor: pointer;
   font-size: 28px;
   letter-spacing: 5px;
@@ -120,7 +120,7 @@
 
 .footer__year,
 .github-link {
-  font-family: 'Roboto Thin';
+  font-family: "Roboto Thin";
   font-size: 22px;
   color: #fff;
   text-decoration: none;
@@ -204,9 +204,9 @@
   .footer__wrapper {
     height: 120%;
   }
-  
+
   .nav__link {
-    font-family: 'Roboto Thin';
+    font-family: "Roboto Thin";
   }
 
   .nav__link {
@@ -220,7 +220,6 @@
 }
 
 @media (max-width: 540px) {
-
   .footer__container {
     height: 450px;
   }

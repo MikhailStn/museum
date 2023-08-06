@@ -25,7 +25,7 @@
   letter-spacing: 5px;
   color: #fff;
   text-transform: uppercase;
-  font-family: 'Forum Regular';
+  font-family: "Forum Regular";
   font-weight: 100;
   margin-top: 80px;
   border-bottom: 3px solid #710707;
@@ -36,7 +36,7 @@
 .picture-explore__text {
   color: #fff;
   font-size: 22px;
-  font-family: 'Roboto Light';
+  font-family: "Roboto Light";
   line-height: 38.5px;
   margin-top: 10px;
   margin-bottom: 15px;
@@ -55,7 +55,7 @@
 }
 
 .picture-explore__slider-controller {
-  background-image: url('../../public/icons/slider_controller.png');
+  background-image: url("../../public/icons/slider_controller.png");
   position: absolute;
   z-index: 10;
   cursor: ew-resize;

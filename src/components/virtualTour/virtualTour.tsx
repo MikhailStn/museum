@@ -1,5 +1,5 @@
-import './virtualTour.css';
-import { virualTourCards } from '../../data/virtualTourCards';
+import "./virtualTour.css";
+import { virualTourCards } from "../../data/virtualTourCards";
 
 export function VirtualTour() {
   return (

@@ -1,5 +1,5 @@
-import './videoJourney.css';
-import { VideoSlider } from './videoSlider';
+import "./videoJourney.css";
+import { VideoSlider } from "./videoSlider";
 
 export function VideoJourney() {
   return (
@@ -8,8 +8,7 @@ export function VideoJourney() {
         <div className="video__title-section">
           <h2 className="video__title">video journey</h2>
           <p className="video__subtitle">
-            Enter and visit one of the most famous museums in the world and enjoy masterpieces such
-            as Mona Lisa or Hammurabi's Code
+            Enter and visit one of the most famous museums in the world and enjoy masterpieces such as Mona Lisa or Hammurabi's Code
           </p>
         </div>
         <div className="video__player-section">

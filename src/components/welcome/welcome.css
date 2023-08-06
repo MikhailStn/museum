@@ -22,7 +22,7 @@
 .welcome__title {
   color: #fff;
   text-transform: uppercase;
-  font-family: 'Forum Regular';
+  font-family: "Forum Regular";
   font-size: 80px;
   letter-spacing: 5px;
   font-weight: 100;
@@ -35,7 +35,7 @@
   color: #fff;
   font-size: 28px;
   letter-spacing: 2px;
-  font-family: 'Roboto Thin';
+  font-family: "Roboto Thin";
   margin: 0;
   padding-top: 25px;
   cursor: default;
@@ -47,13 +47,23 @@
   background-color: #710707;
   font-size: 22px;
   letter-spacing: 2px;
-  font-family: 'Roboto Thin';
   border-radius: 10px;
   border: none;
-  color: #fff;
   cursor: pointer;
   margin-top: 75px;
   transition: 0.3s;
+  padding: 0;
+}
+
+.welcome__button-link {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto Light";
+  color: #fff;
+  text-decoration: none;
 }
 
 .welcome__button:hover {
@@ -339,7 +349,6 @@
 }
 
 @media (max-width: 479px) {
-
   .welcome__section {
     min-width: auto;
   }
@@ -364,9 +373,7 @@
 }
 
 @media (max-width: 400px) {
-  
   .slider__wrapper {
     height: 250px;
   }
-
 }

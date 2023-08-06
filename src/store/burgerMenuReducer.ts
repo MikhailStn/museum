@@ -10,10 +10,7 @@ const defaultState = {
   overlayVisibility: { opacity: 0, visibility: "hidden" },
 };
 
-export const burgerMenuReducer = (
-  state = defaultState,
-  action: MenuActions
-) => {
+export const burgerMenuReducer = (state = defaultState, action: MenuActions) => {
   switch (action.type) {
     case "SHOW_MENU":
       return {
