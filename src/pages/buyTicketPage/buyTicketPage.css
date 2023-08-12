@@ -1,15 +1,14 @@
 .buy-ticket__header {
-  max-width: 1440px;
+  max-width: 1024px;
   width: 100%;
   margin-top: 40px;
   display: grid;
   grid-template-columns: 300px 50%;
-  border-bottom: 2px #710707 solid;
+  border-bottom: 3px #710707 solid;
   justify-content: space-between;
 }
 
 .buy-ticket__header-btn {
-  height: 60px;
   border: none;
   background-color: transparent;
   color: #9d8665;
@@ -18,7 +17,9 @@
   cursor: pointer;
   padding: 0;
   text-align: start;
-  height: 100px;
+  width: 120px;
+  height: 40px;
+  margin-top: 10px;
 }
 
 .buy-ticket__header-btn:hover {
@@ -49,6 +50,5 @@
   flex-direction: column;
   align-items: end;
   justify-content: center;
-  margin-top: 40px;
   cursor: default;
 }
