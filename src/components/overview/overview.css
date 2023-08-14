@@ -1,0 +1,86 @@
+.overview {
+  background: url("../../../public/icons/inputIcons/louvre.jpg");
+  background-repeat: no-repeat;
+  background-position: right top;
+  border-bottom: 2px solid #740c11;
+  padding-bottom: 5px;
+}
+
+.overview__title {
+  font-size: 32px;
+  margin: 0;
+}
+
+.overview__subtitle {
+  font-size: 22px;
+  color: #740c11;
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+.overview__basic,
+.overview__senior {
+  display: flex;
+  align-items: center;
+}
+
+.overview__date,
+.overview__time,
+.overview__ticket-type {
+  margin-bottom: 5px;
+  padding-left: 25px;
+  font-size: 18px;
+  font-family: "Roboto Light";
+}
+
+.overview__date {
+  background: url("../../../public/icons/inputIcons/date.png");
+  background-repeat: no-repeat;
+  background-position: 0 center;
+}
+
+.overview__time {
+  background: url("../../../public/icons/inputIcons/Time.png");
+  background-repeat: no-repeat;
+  background-position: 0 center;
+}
+
+.overview__ticket-type {
+  background: url("../../../public/icons/inputIcons/check_circle_outline.png");
+  background-repeat: no-repeat;
+  background-position: 0 center;
+}
+
+.overview__basic-num,
+.overview__basic-sum,
+.overview__basic-total,
+.overview__senior-num,
+.overview__senior-sum,
+.overview__senior-total {
+  margin: 0;
+}
+
+.overview__basic-num,
+.overview__senior-num {
+  width: 32px;
+  height: 20px;
+  border-radius: 5px;
+  background-color: black;
+  font-size: 18px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overview__basic-sum,
+.overview__senior-sum {
+  font-size: 22px;
+  padding-left: 10px;
+}
+
+.overview__basic-total,
+.overview__senior-total {
+  margin-left: auto;
+  font-size: 22px;
+}

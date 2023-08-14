@@ -39,7 +39,7 @@
 
 .text-danger {
   width: 100%;
-  height: 30px;
+  height: 35px;
   margin-top: 5px;
 }
 
@@ -70,15 +70,15 @@
 
 .entry__tickets {
   border: 1px solid #030303;
-  height: 140px;
+  height: 215px;
   margin-top: 35px;
-  padding: 10px;
+  padding: 20px 10px;
   box-sizing: border-box;
 }
 
 .entry__tickets-title {
   font-family: "Forum Regular";
-  font-size: 18px;
+  font-size: 24px;
   color: #9d8665;
   font-weight: 100;
   border-bottom: 2px solid #740c11;
@@ -99,7 +99,8 @@
   width: 100%;
   flex-direction: column;
   row-gap: 20px;
-  margin-top: 20px;
+  height: 80%;
+  justify-content: center;
 }
 
 .entry__tickets-item {
@@ -184,4 +185,156 @@
   background: url("../../../public/icons/inputIcons/ballot.png");
   background-repeat: no-repeat;
   background-position: 10px center;
+}
+
+.form__overview {
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.form__total {
+  display: flex;
+  padding-top: 10px;
+}
+
+.form__total-sub,
+.form__total-amount {
+  margin: 0;
+  font-size: 32px;
+  padding-bottom: 10px;
+}
+
+.form__total-amount {
+  margin-left: auto;
+}
+
+.card__front {
+  width: 360px;
+  height: 220px;
+  background-color: #bcbcbc;
+  border-radius: 5px;
+  position: relative;
+  z-index: 1;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  background-image: url("../../../public//icons/bank-cards.png");
+  background-repeat: no-repeat;
+  background-position: 280px 30px;
+}
+
+.card__back {
+  width: 360px;
+  height: 211px;
+  background-color: #939393;
+  border-radius: 5px;
+  position: relative;
+  margin-top: -180px;
+  margin-left: auto;
+  z-index: 0;
+}
+
+.card__back-overlay {
+  width: 100%;
+  height: 45px;
+  background-color: #161615;
+  position: relative;
+  top: 20px;
+}
+
+.form__button {
+  width: 220px;
+  height: 45px;
+  background-color: #740c11;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 22px;
+  margin-left: auto;
+  margin-top: 20px;
+  font-family: "Roboto Light";
+  transition: 0.3s;
+}
+
+.form__button:hover {
+  background-color: #9d8665;
+}
+
+.card__sub {
+  margin: 0;
+  font-size: 12px;
+  cursor: default;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+
+.input__card-num,
+.input__card-holder {
+  width: 215px;
+  height: 25px;
+  text-align: center;
+  outline: none;
+  font-size: 18px;
+  border: 1px solid #8a8a8a;
+}
+
+.input__card-num::-webkit-inner-spin-button {
+  appearance: none;
+}
+
+.card__text-danger {
+  font-size: 12px;
+  margin: 0;
+  height: 15px;
+  color: #b10000;
+  cursor: default;
+  height: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.input__card-month,
+.input__card-year {
+  width: 100px;
+  height: 25px;
+  text-align: center;
+  font-size: 18px;
+  border: 1px solid #8a8a8a;
+  outline: none;
+  padding: 0;
+}
+
+.card__expiration {
+  display: grid;
+  grid-template-columns: 100px 100px;
+  column-gap: 20px;
+}
+
+.input__card-month::-webkit-inner-spin-button,
+.input__card-year::-webkit-inner-spin-button,
+.input-cvv::-webkit-inner-spin-button {
+  appearance: none;
+}
+
+.card__back-cvv {
+  margin-left: auto;
+  width: 120px;
+  margin-right: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-cvv {
+  width: 100px;
+  height: 30px;
+  text-align: center;
+  font-size: 18px;
+  border: 1px solid #8a8a8a;
+  outline: none;
+  padding: 0;
+  margin-top: 40px;
 }

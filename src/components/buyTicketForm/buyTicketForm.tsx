@@ -1,8 +1,9 @@
 import "./buyTicketForm.css";
 import { useForm } from "react-hook-form";
 import { FormValues } from "../../types/form";
-import { registerOptions } from "./registerOptions";
-import { selectOptions } from "./selectOptions";
+import { registerOptions } from "../../data/registerOptions";
+import { selectOptions } from "../../data/selectOptions";
+import { Overview } from "../overview/overview";
 
 export function BuyTicketForm() {
   const {
@@ -86,7 +87,61 @@ export function BuyTicketForm() {
         </div>
       </div>
       <div className="form__overview">
-        <button type="submit">Book now</button>
+        <Overview />
+        <div className="form__card">
+          <div className="form__total">
+            <p className="form__total-sub">Total:</p>
+            <p className="form__total-amount">80 €</p>
+          </div>
+          <div className="card">
+            <div className="card__front">
+              <p className="card__sub">Card number</p>
+              <input
+                className="card__input input__card-num"
+                {...register("cardNum", registerOptions.cardNum)}
+                type="number"
+                placeholder="0000 0000 0000 0000"
+              ></input>
+              <p className="card__text-danger">{errors?.cardNum && errors.cardNum.message}</p>
+              <p className="card__sub">Expiration date</p>
+              <div className="card__expiration">
+                <input
+                  className="card__input input__card-month"
+                  {...register("cardMonth", registerOptions.cardMonth)}
+                  type="number"
+                  placeholder="00"
+                ></input>
+                <input
+                  className="card__input input__card-year"
+                  {...register("cardYear", registerOptions.cardYear)}
+                  type="number"
+                  placeholder="0000"
+                ></input>
+              </div>
+              <p className="card__text-danger">
+                {(errors?.cardMonth && errors.cardMonth.message) || (errors?.cardYear && errors.cardYear.message)}
+              </p>
+              <p className="card__sub">Cardholder name</p>
+              <input className="card__input input__card-holder" {...register("cardName", registerOptions.cardName)} type="text"></input>
+              <p className="card__text-danger">{errors?.cardName && errors.cardName.message}</p>
+            </div>
+            <div className="card__back">
+              <div className="card__back-overlay"></div>
+              <div className="card__back-cvv">
+                <input
+                  className="card__back-input input-cvv"
+                  {...register("cardCvv", registerOptions.cardCvv)}
+                  placeholder="000"
+                  type="number"
+                ></input>
+                <p className="card__text-danger">{errors?.cardCvv && errors.cardCvv.message}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button className="form__button" type="submit">
+          Book
+        </button>
       </div>
     </form>
   );

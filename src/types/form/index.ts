@@ -3,5 +3,10 @@ export type FormValues = {
   email: string;
   date: string;
   time: string;
-  tel: string
+  tel: string;
+  cardNum: string;
+  cardYear: string;
+  cardMonth: string;
+  cardName: string;
+  cardCvv: string;
 };
