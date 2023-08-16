@@ -17,4 +17,12 @@ export interface RootState {
     dot4: { color: string } | {};
     dot5: { color: string } | {};
   };
+  ticketReducer: {
+    total: number | string;
+    ticketType: string;
+    basicNum: number;
+    seniorNum: number;
+    date: string;
+    time: string;
+  };
 }

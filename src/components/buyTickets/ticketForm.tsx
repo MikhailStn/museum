@@ -1,6 +1,11 @@
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { RootState } from "../../types/rootState";
+import { increaseBasicTicket, decreaseBasicTicket, increaseSeniorTicket, decreaseSeniorTicket } from "../../functions/ticketsFunc";
 
 export function TicketForm() {
+  const state = useSelector((state: RootState) => state.ticketReducer);
+
   return (
     <form className="buy-tickets__form">
       <div className="buy-tickets__types">
@@ -32,15 +37,17 @@ export function TicketForm() {
             <button
               onClick={(event) => {
                 event.preventDefault();
+                decreaseBasicTicket();
               }}
               className="buy-tickets__amount-controls-btn"
             >
               –
             </button>
-            <span className="buy-tickets__amount-value">1</span>
+            <span className="buy-tickets__amount-value">{state.basicNum}</span>
             <button
               onClick={(event) => {
                 event.preventDefault();
+                increaseBasicTicket();
               }}
               className="buy-tickets__amount-controls-btn"
             >
@@ -54,15 +61,17 @@ export function TicketForm() {
             <button
               onClick={(event) => {
                 event.preventDefault();
+                decreaseSeniorTicket();
               }}
               className="buy-tickets__amount-controls-btn"
             >
               –
             </button>
-            <span className="buy-tickets__amount-value">1</span>
+            <span className="buy-tickets__amount-value">{state.seniorNum}</span>
             <button
               onClick={(event) => {
                 event.preventDefault();
+                increaseSeniorTicket();
               }}
               className="buy-tickets__amount-controls-btn"
             >

@@ -4,8 +4,15 @@ import { FormValues } from "../../types/form";
 import { registerOptions } from "../../data/registerOptions";
 import { selectOptions } from "../../data/selectOptions";
 import { Overview } from "../overview/overview";
+import { RootState } from "../../types/rootState";
+import { useDispatch, useSelector } from "react-redux";
+import { date } from "../../store/ticketsReducer";
+import { increaseBasicTicket, decreaseBasicTicket, increaseSeniorTicket, decreaseSeniorTicket } from "../../functions/ticketsFunc";
 
 export function BuyTicketForm() {
+  const dispatch = useDispatch();
+  const state = useSelector((state: RootState) => state.ticketReducer);
+
   const {
     register,
     handleSubmit,
@@ -18,8 +25,29 @@ export function BuyTicketForm() {
     <form className="form__container" onSubmit={onSubmit}>
       <div className="form__inputs">
         <div className="time__inputs">
-          <input className="time__input" {...register("date", registerOptions.date)} type="date"></input>
-          <input className="date__input" {...register("time", registerOptions.time)} type="time"></input>
+          <input
+            className="date__input"
+            {...register("date", registerOptions.date)}
+            type="date"
+            min={date}
+            onChange={(e) => {
+              dispatch({
+                type: "CHANGE_DATE",
+                payload: e.target.value,
+              });
+            }}
+          ></input>
+          <input
+            className="time__input"
+            {...register("time", registerOptions.time)}
+            type="time"
+            onChange={(e) => {
+              dispatch({
+                type: "CHANGE_TIME",
+                payload: e.target.value,
+              });
+            }}
+          ></input>
           <p className="text-danger">{errors?.date && errors.date.message}</p>
           <p className="text-danger">{errors?.time && errors.time.message}</p>
         </div>
@@ -46,15 +74,17 @@ export function BuyTicketForm() {
                   className="entry__tickets-btn"
                   onClick={(e) => {
                     e.preventDefault();
+                    decreaseBasicTicket();
                   }}
                 >
                   -
                 </button>
-                <span className="entry__tickets-num">0</span>
+                <span className="entry__tickets-num">{state.basicNum}</span>
                 <button
                   className="entry__tickets-btn"
                   onClick={(e) => {
                     e.preventDefault();
+                    increaseBasicTicket();
                   }}
                 >
                   +
@@ -68,15 +98,17 @@ export function BuyTicketForm() {
                   className="entry__tickets-btn"
                   onClick={(e) => {
                     e.preventDefault();
+                    decreaseSeniorTicket();
                   }}
                 >
                   -
                 </button>
-                <span className="entry__tickets-num">0</span>
+                <span className="entry__tickets-num">{state.seniorNum}</span>
                 <button
                   className="entry__tickets-btn"
                   onClick={(e) => {
                     e.preventDefault();
+                    increaseSeniorTicket();
                   }}
                 >
                   +
@@ -91,7 +123,7 @@ export function BuyTicketForm() {
         <div className="form__card">
           <div className="form__total">
             <p className="form__total-sub">Total:</p>
-            <p className="form__total-amount">80 €</p>
+            <p className="form__total-amount">{state.total} €</p>
           </div>
           <div className="card">
             <div className="card__front">
@@ -139,7 +171,7 @@ export function BuyTicketForm() {
             </div>
           </div>
         </div>
-        <button className="form__button" type="submit">
+        <button className="form__button" type="submit" onClick={onSubmit}>
           Book
         </button>
       </div>

@@ -143,13 +143,13 @@
   border: 1px solid #030303;
 }
 
-.time__input {
+.date__input {
   background: url("../../../public/icons/inputIcons/date.png");
   background-repeat: no-repeat;
   background-position: 10px center;
 }
 
-.date__input {
+.time__input {
   background: url("../../../public/icons/inputIcons/time.png");
   background-repeat: no-repeat;
   background-position: 10px center;
