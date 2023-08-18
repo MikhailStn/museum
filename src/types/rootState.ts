@@ -18,11 +18,14 @@ export interface RootState {
     dot5: { color: string } | {};
   };
   ticketReducer: {
-    total: number | string;
     ticketType: string;
     basicNum: number;
     seniorNum: number;
     date: string;
     time: string;
+    basicSum: number;
+    seniorSum: number;
+    basic: number;
+    senior: number;
   };
 }

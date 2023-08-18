@@ -1,5 +1,6 @@
 import "./buyTicketForm.css";
 import { useForm } from "react-hook-form";
+import { /* useRef, */ useState } from "react";
 import { FormValues } from "../../types/form";
 import { registerOptions } from "../../data/registerOptions";
 import { selectOptions } from "../../data/selectOptions";
@@ -12,17 +13,32 @@ import { increaseBasicTicket, decreaseBasicTicket, increaseSeniorTicket, decreas
 export function BuyTicketForm() {
   const dispatch = useDispatch();
   const state = useSelector((state: RootState) => state.ticketReducer);
-
+  const [totalDangerStyle, setTotalDangerStyle] = useState<React.CSSProperties>({ opacity: 0, visibility: "hidden" });
+  const [popupStyle, setPopupStyle] = useState<React.CSSProperties>({ opacity: 0, visibility: "hidden" });
+  //const dateRef = useRef<HTMLInputElement>(null);
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm<FormValues>();
 
-  const onSubmit = handleSubmit((data) => console.log(data));
+  const onSubmit = handleSubmit(() => {
+    if (state.basicNum == 0 && state.seniorNum == 0) {
+      return;
+    } else {
+      //if (dateRef.current) dateRef.current.value = "";
+      setPopupStyle({ opacity: 1, visibility: "visible" });
+      setTimeout(() => {
+        setPopupStyle({ opacity: 0, visibility: "hidden" });
+      }, 2000);
+    }
+  });
 
   return (
     <form className="form__container" onSubmit={onSubmit}>
+      <div className="form__popup" style={popupStyle}>
+        <div className="form__success-window">Success!</div>
+      </div>
       <div className="form__inputs">
         <div className="time__inputs">
           <input
@@ -57,9 +73,36 @@ export function BuyTicketForm() {
         <p className="text-danger">{errors?.email && errors.email.message}</p>
         <input className="form__input input__phone" {...register("tel", registerOptions.tel)} placeholder="Phone" type="number" />
         <p className="text-danger">{errors?.tel && errors.tel.message}</p>
-        <select className="form__input form__select">
+        <select
+          className="form__input form__select"
+          value={state.ticketType}
+          onChange={(e) => {
+            if (e.target.value == "Permanent Exhibition") {
+              dispatch({
+                type: "CHANGE_TICKET_TYPE",
+                payload: e.target.value,
+                basic: 20,
+                senior: 10,
+              });
+            } else if (e.target.value == "Temporary Exhibition") {
+              dispatch({
+                type: "CHANGE_TICKET_TYPE",
+                payload: e.target.value,
+                basic: 30,
+                senior: 15,
+              });
+            } else if (e.target.value == "Combined Admission") {
+              dispatch({
+                type: "CHANGE_TICKET_TYPE",
+                payload: e.target.value,
+                basic: 40,
+                senior: 20,
+              });
+            }
+          }}
+        >
           {selectOptions.map((el) => (
-            <option className="form__option" key={el.value}>
+            <option className="form__option" key={el.value} value={el.label}>
               {el.label}
             </option>
           ))}
@@ -68,7 +111,17 @@ export function BuyTicketForm() {
           <h3 className="entry__tickets-title">Entry Ticket</h3>
           <div className="entry__tickets-items">
             <div className="entry__tickets-item">
-              <p className="entry__tickets-item-sub">Basic 18+ (20 €)</p>
+              <p className="entry__tickets-item-sub">
+                Basic 18+ (
+                {state.ticketType == "Permanent Exhibition"
+                  ? 20
+                  : false || state.ticketType == "Temporary Exhibition"
+                  ? 30
+                  : false || state.ticketType == "Combined Admission"
+                  ? 40
+                  : false}{" "}
+                €)
+              </p>
               <div className="entry__tickets-btns">
                 <button
                   className="entry__tickets-btn"
@@ -85,6 +138,7 @@ export function BuyTicketForm() {
                   onClick={(e) => {
                     e.preventDefault();
                     increaseBasicTicket();
+                    setTotalDangerStyle({ opacity: 0, visibility: "hidden" });
                   }}
                 >
                   +
@@ -92,7 +146,17 @@ export function BuyTicketForm() {
               </div>
             </div>
             <div className="entry__tickets-item">
-              <p className="entry__tickets-item-sub">Senior 65+ (10 €)</p>
+              <p className="entry__tickets-item-sub">
+                Senior 65+ (
+                {state.ticketType == "Permanent Exhibition"
+                  ? 10
+                  : false || state.ticketType == "Temporary Exhibition"
+                  ? 15
+                  : false || state.ticketType == "Combined Admission"
+                  ? 20
+                  : false}{" "}
+                €)
+              </p>
               <div className="entry__tickets-btns">
                 <button
                   className="entry__tickets-btn"
@@ -109,6 +173,7 @@ export function BuyTicketForm() {
                   onClick={(e) => {
                     e.preventDefault();
                     increaseSeniorTicket();
+                    setTotalDangerStyle({ opacity: 0, visibility: "hidden" });
                   }}
                 >
                   +
@@ -121,9 +186,14 @@ export function BuyTicketForm() {
       <div className="form__overview">
         <Overview />
         <div className="form__card">
-          <div className="form__total">
-            <p className="form__total-sub">Total:</p>
-            <p className="form__total-amount">{state.total} €</p>
+          <div className="form__total-wrapper">
+            <div className="form__total">
+              <p className="form__total-sub">Total:</p>
+              <p className="form__total-amount">{state.basicSum + state.seniorSum} €</p>
+            </div>
+            <p className="text-danger total-danger" style={totalDangerStyle}>
+              You should order at least one ticket
+            </p>
           </div>
           <div className="card">
             <div className="card__front">
@@ -171,7 +241,18 @@ export function BuyTicketForm() {
             </div>
           </div>
         </div>
-        <button className="form__button" type="submit" onClick={onSubmit}>
+        <button
+          className="form__button"
+          type="submit"
+          onClick={() => {
+            if (state.basicNum == 0 && state.seniorNum == 0) {
+              setTotalDangerStyle({ opacity: 1, visibility: "visible" });
+              return;
+            } else {
+              setTotalDangerStyle({ opacity: 0, visibility: "hidden" });
+            }
+          }}
+        >
           Book
         </button>
       </div>

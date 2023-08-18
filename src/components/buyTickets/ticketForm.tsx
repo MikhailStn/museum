@@ -3,27 +3,75 @@ import { useSelector } from "react-redux";
 import { RootState } from "../../types/rootState";
 import { increaseBasicTicket, decreaseBasicTicket, increaseSeniorTicket, decreaseSeniorTicket } from "../../functions/ticketsFunc";
 
+import { useDispatch } from "react-redux";
+
 export function TicketForm() {
   const state = useSelector((state: RootState) => state.ticketReducer);
+  const dispatch = useDispatch();
 
   return (
     <form className="buy-tickets__form">
       <div className="buy-tickets__types">
         <h3 className="buy-tickets__types-title">Ticket Type</h3>
         <div className="buy-tickets__types-item">
-          <input className="buy-tickets__types-input" type="radio" id="permanent" name="ticket_type"></input>
+          <input
+            className="buy-tickets__types-input"
+            type="radio"
+            value="Permanent Exhibition"
+            checked={state.ticketType == "Permanent Exhibition" ? true : false}
+            onChange={(e) => {
+              dispatch({
+                type: "CHANGE_TICKET_TYPE",
+                payload: e.target.value,
+                basic: 20,
+                senior: 10,
+              });
+            }}
+            id="permanent"
+            name="ticket_type"
+          ></input>
           <label className="buy-tickets__types-label" htmlFor="permanent">
             Permanent Exhibition
           </label>
         </div>
         <div className="buy-tickets__types-item">
-          <input className="buy-tickets__types-input" type="radio" id="temporary" name="ticket_type"></input>
+          <input
+            className="buy-tickets__types-input"
+            type="radio"
+            checked={state.ticketType == "Temporary Exhibition" ? true : false}
+            value="Temporary Exhibition"
+            onChange={(e) => {
+              dispatch({
+                type: "CHANGE_TICKET_TYPE",
+                payload: e.target.value,
+                basic: 30,
+                senior: 15,
+              });
+            }}
+            id="temporary"
+            name="ticket_type"
+          ></input>
           <label className="buy-tickets__types-label" htmlFor="temporary">
             Temporary Exhibition
           </label>
         </div>
         <div className="buy-tickets__types-item">
-          <input className="buy-tickets__types-input" type="radio" id="combined" name="ticket_type"></input>
+          <input
+            className="buy-tickets__types-input"
+            type="radio"
+            checked={state.ticketType == "Combined Admission" ? true : false}
+            value="Combined Admission"
+            onChange={(e) => {
+              dispatch({
+                type: "CHANGE_TICKET_TYPE",
+                payload: e.target.value,
+                basic: 40,
+                senior: 20,
+              });
+            }}
+            id="combined"
+            name="ticket_type"
+          ></input>
           <label className="buy-tickets__types-label" htmlFor="combined">
             Combined Admission
           </label>
@@ -79,7 +127,7 @@ export function TicketForm() {
             </button>
           </div>
         </div>
-        <p className="buy-tickets__amount-total">Total €{0}</p>
+        <p className="buy-tickets__amount-total">Total €{state.basicSum + state.seniorSum}</p>
         <button
           onClick={(event) => {
             event.preventDefault();

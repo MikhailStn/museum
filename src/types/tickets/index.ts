@@ -28,10 +28,18 @@ type DecreaseSeniorTicker = {
   payload: number;
 };
 
+type ChangeTicketType = {
+  type: "CHANGE_TICKET_TYPE";
+  payload: string;
+  basic: number;
+  senior: number;
+};
+
 export type TicketActions =
   | ChangeDate
   | ChangeTime
   | IncreaseBasicTicker
   | DecreaseBasicTicker
   | IncreaseSeniorTicker
-  | DecreaseSeniorTicker;
+  | DecreaseSeniorTicker
+  | ChangeTicketType;

@@ -1,5 +1,5 @@
 export const selectOptions = [
-  { value: "permanent", label: "Permanent Exhibition" },
-  { value: "temporary", label: "Temporary Exhibition" },
-  { value: "combined", label: "Combined Admission" },
+  { value: "perm", label: "Permanent Exhibition" },
+  { value: "temp", label: "Temporary Exhibition" },
+  { value: "comb", label: "Combined Admission" },
 ];
