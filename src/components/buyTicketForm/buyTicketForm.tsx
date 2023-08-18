@@ -1,6 +1,6 @@
 import "./buyTicketForm.css";
 import { useForm } from "react-hook-form";
-import { /* useRef, */ useState } from "react";
+import { useState } from "react";
 import { FormValues } from "../../types/form";
 import { registerOptions } from "../../data/registerOptions";
 import { selectOptions } from "../../data/selectOptions";
@@ -15,7 +15,6 @@ export function BuyTicketForm() {
   const state = useSelector((state: RootState) => state.ticketReducer);
   const [totalDangerStyle, setTotalDangerStyle] = useState<React.CSSProperties>({ opacity: 0, visibility: "hidden" });
   const [popupStyle, setPopupStyle] = useState<React.CSSProperties>({ opacity: 0, visibility: "hidden" });
-  //const dateRef = useRef<HTMLInputElement>(null);
   const {
     register,
     handleSubmit,
@@ -26,7 +25,9 @@ export function BuyTicketForm() {
     if (state.basicNum == 0 && state.seniorNum == 0) {
       return;
     } else {
-      //if (dateRef.current) dateRef.current.value = "";
+      dispatch({
+        type: "RETURN_DEFAULT_STATE",
+      });
       setPopupStyle({ opacity: 1, visibility: "visible" });
       setTimeout(() => {
         setPopupStyle({ opacity: 0, visibility: "hidden" });
@@ -41,37 +42,36 @@ export function BuyTicketForm() {
       </div>
       <div className="form__inputs">
         <div className="time__inputs">
-          <input
-            className="date__input"
-            {...register("date", registerOptions.date)}
-            type="date"
-            min={date}
-            onChange={(e) => {
-              dispatch({
-                type: "CHANGE_DATE",
-                payload: e.target.value,
-              });
-            }}
-          ></input>
-          <input
-            className="time__input"
-            {...register("time", registerOptions.time)}
-            type="time"
-            onChange={(e) => {
-              dispatch({
-                type: "CHANGE_TIME",
-                payload: e.target.value,
-              });
-            }}
-          ></input>
+          <input className="date__input" {...register("date", registerOptions.date)} type="date" min={date} value={state.date}></input>
+          <input className="time__input" {...register("time", registerOptions.time)} type="time" value={state.time}></input>
           <p className="text-danger">{errors?.date && errors.date.message}</p>
           <p className="text-danger">{errors?.time && errors.time.message}</p>
         </div>
-        <input className="form__input input__name" {...register("name", registerOptions.name)} placeholder="Name" />
+        <input
+          value={state.name}
+          className="form__input input__name"
+          {...register("name", registerOptions.name)}
+          placeholder="Name"
+          autoComplete="none"
+        />
         <p className="text-danger">{errors?.name && errors.name.message}</p>
-        <input className="form__input input__mail" {...register("email", registerOptions.email)} placeholder="E-mail" type="email" />
+        <input
+          value={state.email}
+          className="form__input input__mail"
+          {...register("email", registerOptions.email)}
+          placeholder="E-mail"
+          type="email"
+          autoComplete="none"
+        />
         <p className="text-danger">{errors?.email && errors.email.message}</p>
-        <input className="form__input input__phone" {...register("tel", registerOptions.tel)} placeholder="Phone" type="number" />
+        <input
+          value={state.phone}
+          className="form__input input__phone"
+          {...register("tel", registerOptions.tel)}
+          placeholder="Phone"
+          type="number"
+          autoComplete="none"
+        />
         <p className="text-danger">{errors?.tel && errors.tel.message}</p>
         <select
           className="form__input form__select"
@@ -201,6 +201,7 @@ export function BuyTicketForm() {
               <input
                 className="card__input input__card-num"
                 {...register("cardNum", registerOptions.cardNum)}
+                value={state.cardNum}
                 type="number"
                 placeholder="0000 0000 0000 0000"
               ></input>
@@ -210,11 +211,13 @@ export function BuyTicketForm() {
                 <input
                   className="card__input input__card-month"
                   {...register("cardMonth", registerOptions.cardMonth)}
+                  value={state.cardMonth}
                   type="number"
                   placeholder="00"
                 ></input>
                 <input
                   className="card__input input__card-year"
+                  value={state.cardYear}
                   {...register("cardYear", registerOptions.cardYear)}
                   type="number"
                   placeholder="0000"
@@ -224,7 +227,12 @@ export function BuyTicketForm() {
                 {(errors?.cardMonth && errors.cardMonth.message) || (errors?.cardYear && errors.cardYear.message)}
               </p>
               <p className="card__sub">Cardholder name</p>
-              <input className="card__input input__card-holder" {...register("cardName", registerOptions.cardName)} type="text"></input>
+              <input
+                className="card__input input__card-holder"
+                value={state.cardHolder}
+                {...register("cardName", registerOptions.cardName)}
+                type="text"
+              ></input>
               <p className="card__text-danger">{errors?.cardName && errors.cardName.message}</p>
             </div>
             <div className="card__back">
@@ -232,6 +240,7 @@ export function BuyTicketForm() {
               <div className="card__back-cvv">
                 <input
                   className="card__back-input input-cvv"
+                  value={state.cardCvv}
                   {...register("cardCvv", registerOptions.cardCvv)}
                   placeholder="000"
                   type="number"

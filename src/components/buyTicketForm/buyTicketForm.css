@@ -74,6 +74,7 @@
   margin-top: 35px;
   padding: 20px 10px;
   box-sizing: border-box;
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
 }
 
 .entry__tickets-title {
@@ -147,12 +148,14 @@
   background: url("../../../public/icons/inputIcons/date.png");
   background-repeat: no-repeat;
   background-position: 10px center;
+  box-shadow: 2px 2px 8px 0px rgba(34, 60, 80, 0.2);
 }
 
 .time__input {
   background: url("../../../public/icons/inputIcons/time.png");
   background-repeat: no-repeat;
   background-position: 10px center;
+  box-shadow: 2px 2px 8px 0px rgba(34, 60, 80, 0.2);
 }
 
 .time__input::-webkit-calendar-picker-indicator,
@@ -167,24 +170,28 @@
   background: url("../../../public/icons/inputIcons/name.png");
   background-repeat: no-repeat;
   background-position: 10px center;
+  box-shadow: 2px 2px 8px 0px rgba(34, 60, 80, 0.2);
 }
 
 .input__mail {
   background: url("../../../public/icons/inputIcons/email.png");
   background-repeat: no-repeat;
   background-position: 10px center;
+  box-shadow: 2px 2px 8px 0px rgba(34, 60, 80, 0.2);
 }
 
 .input__phone {
   background: url("../../../public/icons/inputIcons/tel.png");
   background-repeat: no-repeat;
   background-position: 10px center;
+  box-shadow: 2px 2px 8px 0px rgba(34, 60, 80, 0.2);
 }
 
 .form__select {
   background: url("../../../public/icons/inputIcons/ballot.png");
   background-repeat: no-repeat;
   background-position: 10px center;
+  box-shadow: 2px 2px 8px 0px rgba(34, 60, 80, 0.2);
 }
 
 .form__overview {
@@ -192,6 +199,7 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
 }
 
 .form__total {
@@ -226,6 +234,7 @@
   background-image: url("../../../public//icons/bank-cards.png");
   background-repeat: no-repeat;
   background-position: 280px 30px;
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
 }
 
 .card__back {
@@ -237,6 +246,7 @@
   margin-top: -180px;
   margin-left: auto;
   z-index: 0;
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
 }
 
 .card__back-overlay {

@@ -25,7 +25,15 @@ export interface RootState {
     time: string;
     basicSum: number;
     seniorSum: number;
-    basic: number;
-    senior: number;
+    basicAmount: number;
+    seniorAmount: number;
+    name: string;
+    email: string;
+    phone: string;
+    cardNum: string;
+    cardMonth: string;
+    cardYear: string;
+    cardHolder: string;
+    cardCvv: string;
   };
 }

@@ -6,13 +6,12 @@ export const date =
   `${dateMs.getMonth() < 10 ? "0" + (Number(dateMs.getMonth()) + 1) : Number(dateMs.getMonth()) + 1}-` +
   `${dateMs.getDate() < 10 ? "0" + dateMs.getDate() : dateMs.getDate()}`;
 
-const time =
+export const time =
   `${dateMs.getHours() < 10 ? "0" + dateMs.getHours() : dateMs.getHours()}` +
   ":" +
   `${dateMs.getMinutes() < 10 ? "0" + dateMs.getMinutes() : dateMs.getMinutes()}`;
 
 const defaultState = {
-  total: 0,
   ticketType: "Permanent Exhibition",
   basicAmount: 20,
   seniorAmount: 10,
@@ -20,8 +19,16 @@ const defaultState = {
   seniorNum: 0,
   basicSum: 0,
   seniorSum: 0,
-  date: date,
-  time: time,
+  date: "",
+  time: "",
+  name: "",
+  email: "",
+  phone: "",
+  cardNum: "",
+  cardMonth: "",
+  cardYear: "",
+  cardHolder: "",
+  cardCvv: "",
 };
 
 export const ticketReducer = (state = defaultState, action: TicketActions) => {
@@ -82,6 +89,73 @@ export const ticketReducer = (state = defaultState, action: TicketActions) => {
         seniorAmount: action.senior,
         basicSum: state.basicNum * action.basic,
         seniorSum: state.seniorNum * action.senior,
+      };
+    }
+    case "CHANGE_NAME": {
+      return {
+        ...state,
+        name: action.payload,
+      };
+    }
+    case "CHANGE_EMAIL": {
+      return {
+        ...state,
+        email: action.payload,
+      };
+    }
+    case "CHANGE_PHONE": {
+      return {
+        ...state,
+        phone: action.payload,
+      };
+    }
+    case "CHANGE_CARD_NUMBER": {
+      return {
+        ...state,
+        cardNum: action.payload,
+      };
+    }
+    case "CHANGE_CARD_MONTH": {
+      return {
+        ...state,
+        cardMonth: action.payload,
+      };
+    }
+    case "CHANGE_CARD_YEAR": {
+      return {
+        ...state,
+        cardYear: action.payload,
+      };
+    }
+    case "CHANGE_CARD_HOLDER": {
+      return {
+        ...state,
+        cardHolder: action.payload,
+      };
+    }
+    case "CHANGE_CARD_CVV": {
+      return {
+        ...state,
+        cardCvv: action.payload,
+      };
+    }
+    case "RETURN_DEFAULT_STATE": {
+      return {
+        ...state,
+        basicNum: 0,
+        seniorNum: 0,
+        basicSum: 0,
+        seniorSum: 0,
+        date: "",
+        time: "",
+        name: "",
+        email: "",
+        phone: "",
+        cardNum: "",
+        cardMonth: "",
+        cardYear: "",
+        cardHolder: "",
+        cardCvv: "",
       };
     }
     default:

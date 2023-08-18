@@ -1,17 +1,18 @@
 import "./overview.css";
 import { RootState } from "../../types/rootState";
-import { /* useDispatch, */ useSelector } from "react-redux";
+import { useSelector } from "react-redux";
+import { date } from "../../store/ticketsReducer";
+import { time } from "../../store/ticketsReducer";
 
 export function Overview() {
-  // const dispatch = useDispatch();
   const state = useSelector((state: RootState) => state.ticketReducer);
 
   return (
     <div className="overview">
       <h2 className="overview__title">Overview</h2>
       <h3 className="overview__subtitle">Tour to Louvre</h3>
-      <div className="overview__date">{state.date}</div>
-      <div className="overview__time">{state.time}</div>
+      <div className="overview__date">{state.date == "" ? date : state.date}</div>
+      <div className="overview__time">{state.time == "" ? time : state.time}</div>
       <div className="overview__ticket-type">{state.ticketType}</div>
       <div className="overview__basic">
         <p className="overview__basic-num">{state.basicNum}</p>
