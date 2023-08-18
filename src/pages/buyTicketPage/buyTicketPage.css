@@ -1,3 +1,10 @@
+.buy-ticket__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .buy-ticket__header {
   max-width: 1024px;
   width: 100%;
@@ -26,16 +33,17 @@
   color: #710707;
 }
 
-.buy-ticket__logo__title {
+.buy-ticket__logo-title {
   font-size: 50px;
   text-transform: uppercase;
   font-family: "Forum Regular";
   color: #9d8665;
   font-weight: 100;
   margin: 0;
+  text-decoration: none;
 }
 
-.buy-ticket__logo__subtitle {
+.buy-ticket__logo-subtitle {
   font-size: 18px;
   font-family: "Roboto Regular";
   color: #710707;
@@ -51,4 +59,10 @@
   align-items: end;
   justify-content: center;
   cursor: default;
+}
+
+@media (max-width: 1064px) {
+  .buy-ticket__wrapper {
+    padding: 20px;
+  }
 }

@@ -382,3 +382,89 @@
   padding-top: 200px;
   box-sizing: border-box;
 }
+
+@media (max-width: 1064px) {
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+    padding-top: 20px;
+  }
+
+  .buy-ticket__logo-title {
+    font-size: 28px;
+  }
+
+  .card__front {
+    width: 340px;
+    padding: 10px;
+  }
+
+  .card__back {
+    width: 340px;
+    margin: 0;
+  }
+}
+
+@media (max-width: 730px) {
+  .form__container {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+  }
+
+  .form__inputs {
+    width: 100%;
+  }
+
+  .form__overview {
+    width: 100%;
+  }
+
+  .buy-ticket__header {
+    grid-template-columns: 120px 50%;
+  }
+
+  .buy-ticket__logo-title {
+    font-size: 18px;
+  }
+
+  .buy-ticket__header-btn {
+    font-size: 24px;
+  }
+
+  input {
+    font-size: 16px !important;
+  }
+
+  .form__select {
+    font-size: 16px;
+  }
+
+  .form__button {
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+
+  .overview__basic-sum,
+  .overview__senior-sum {
+    font-size: 18px !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .card__front {
+    width: 260px;
+    height: 230px;
+  }
+
+  .card__back {
+    width: 260px;
+    height: 210px;
+  }
+
+  .overview {
+    background: none !important;
+  }
+}

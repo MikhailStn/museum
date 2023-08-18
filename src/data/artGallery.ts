@@ -15,64 +15,19 @@ import gallery14 from "../../public/images/gallery/galery14.jpg";
 import gallery15 from "../../public/images/gallery/galery15.jpg";
 
 export const galleryImages = [
-  {
-    id: "gallery1",
-    path: gallery1,
-  },
-  {
-    id: "gallery2",
-    path: gallery2,
-  },
-  {
-    id: "gallery3",
-    path: gallery3,
-  },
-  {
-    id: "gallery4",
-    path: gallery4,
-  },
-  {
-    id: "gallery5",
-    path: gallery5,
-  },
-  {
-    id: "gallery6",
-    path: gallery6,
-  },
-  {
-    id: "gallery7",
-    path: gallery7,
-  },
-  {
-    id: "gallery8",
-    path: gallery8,
-  },
-  {
-    id: "gallery9",
-    path: gallery9,
-  },
-  {
-    id: "gallery10",
-    path: gallery10,
-  },
-  {
-    id: "gallery11",
-    path: gallery11,
-  },
-  {
-    id: "gallery12",
-    path: gallery12,
-  },
-  {
-    id: "gallery13",
-    path: gallery13,
-  },
-  {
-    id: "gallery14",
-    path: gallery14,
-  },
-  {
-    id: "gallery15",
-    path: gallery15,
-  },
+  { index: 0, id: "gallery1", path: gallery1 },
+  { index: 1, id: "gallery2", path: gallery2 },
+  { index: 2, id: "gallery3", path: gallery3 },
+  { index: 3, id: "gallery4", path: gallery4 },
+  { index: 4, id: "gallery5", path: gallery5 },
+  { index: 5, id: "gallery6", path: gallery6 },
+  { index: 6, id: "gallery7", path: gallery7 },
+  { index: 7, id: "gallery8", path: gallery8 },
+  { index: 8, id: "gallery9", path: gallery9 },
+  { index: 9, id: "gallery10", path: gallery10 },
+  { index: 10, id: "gallery11", path: gallery11 },
+  { index: 11, id: "gallery12", path: gallery12 },
+  { index: 12, id: "gallery13", path: gallery13 },
+  { index: 13, id: "gallery14", path: gallery14 },
+  { index: 14, id: "gallery15", path: gallery15 },
 ];

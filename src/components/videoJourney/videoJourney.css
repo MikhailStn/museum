@@ -37,7 +37,7 @@
 }
 
 .video-slider {
-  padding-bottom: 140px;
+  margin-bottom: 140px;
   cursor: pointer;
 }
 
@@ -114,7 +114,7 @@
   }
 
   .video-slider {
-    padding-bottom: 90px;
+    margin-bottom: 90px;
   }
 }
 
