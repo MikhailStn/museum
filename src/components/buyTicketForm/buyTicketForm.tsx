@@ -76,6 +76,7 @@ export function BuyTicketForm() {
         <select
           className="form__input form__select"
           value={state.ticketType}
+          name="ticket-type"
           onChange={(e) => {
             if (e.target.value == "Permanent Exhibition") {
               dispatch({
