@@ -420,6 +420,7 @@
 
   .form__overview {
     width: 100%;
+    margin-bottom: 40px;
   }
 
   .buy-ticket__header {

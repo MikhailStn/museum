@@ -40,7 +40,7 @@
 }
 
 .footer__logo {
-  background-image: url("../../public/icons/logo.svg");
+  background-image: url("../../../public/icons/logo.svg");
   width: 50px;
   height: 30px;
   cursor: pointer;
